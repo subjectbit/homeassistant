@@ -1,0 +1,15 @@
+##########################################################
+## Yeelights
+##########################################################
+
+- platform: yeelight
+  devices:
+    192.168.86.166:
+      name: 'Loft Light'
+      use_music_mode: True
+      
+    192.168.86.250:
+      name: 'Desk Light'
+
+    192.168.86.231:
+      name: 'Living Room Ambience'

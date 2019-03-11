@@ -1,0 +1,10 @@
+##########################################################
+## Entertainment
+##########################################################
+
+- name: Entertainment
+  entities:
+    switch.living_room_lamp: off
+    automation.occupancy__turn_on_living_room_lights_when_occupied: off
+    script.turn_on_tv: on
+    light.living_room_ambience: on

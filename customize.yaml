@@ -1,0 +1,130 @@
+media_player.lrc72618:
+  friendly_name: Chromecast
+  icon: mdi:chrome
+media_player.samsung_led48_un48j5200:
+  friendly_name: Samsung TV
+media_player.kitchen_speaker:
+  friendly_name: Kitchen Speaker
+  icon: mdi:speaker
+media_player.living_room_speaker:
+  friendly_name: Living Room Speaker
+  icon: mdi:speaker
+media_player.office_home:
+  friendly_name: Loft Speaker
+  icon: mdi:speaker
+media_player.xboxone:
+  friendly_name: Xbox
+  icon: mdi:xbox
+script.restart_hass:
+  icon: mdi:restart
+script.restart_watchtower:
+  icon: mdi:restart
+script.restart_organizr:
+  icon: mdi:restart
+script.restart_portainer:
+  icon: mdi:restart
+script.restart_syncthing:
+  icon: mdi:restart
+script.restart_grafana:
+  icon: mdi:restart
+sensor.pws_alerts:
+  friendly_name: Weather Alerts
+sun.sun:
+  friendly_name: Sun Position
+  icon: mdi:white-balance-sunny
+sensor.wifi_last_restart:
+  friendly_name: Wi-Fi Last Restart
+sensor.wifi_status:
+  friendly_name: Wi-Fi Status
+sensor.wifi_uptime:
+  friendly_name: Wi-Fi Uptime
+light.jv_nightstand:
+  friendly_name: JV Nightstand
+  icon: mdi:lamp
+light.mb_nightstand:
+  friendly_name: MB Nightstand
+  icon: mdi:lamp
+switch.kylees_lamp:
+  friendly_name: Kylee's Desk Light
+  icon: mdi:lamp
+light.loft_light:
+  friendly_name: Loft Light
+  icon: mdi:lamp
+switch.living_room_lamp:
+  friendly_name: Living Room Light
+  icon: mdi:lamp
+light.kylees_bedroom_light:
+  icon: mdi:lamp
+light.desk_light:
+  icon: mdi:lamp
+light.loft_fan_light:
+  icon: mdi:lamp
+sensor.illumination_7811dcb36941:
+  friendly_name: Loft Gateway Light
+light.yeelight_strip_7811dc686a5d:
+  friendly_name: Living Room Ambience
+  icon: mdi:lamp
+binary_sensor.switch_158d0002016f71:
+  friendly_name: Bedroom Wireless Switch
+binary_sensor.switch_158d0001f400d1:
+  friendly_name: 2nd Bedroom Wireless Switch
+binary_sensor.switch_158d0001f3a851:
+  friendly_name: Loft Wireless Switch
+sensor.jv_work:
+  icon: mdi:car
+sensor.mb_work:
+  icon: mdi:car
+sensor.jv_home:
+  icon: mdi:home-map-marker
+sensor.mb_home:
+  icon: mdi:home-map-marker
+binary_sensor.motion_sensor_158d0001d67135:
+  friendly_name: Kitchen Occupancy
+binary_sensor.motion_sensor_158d0001d54b4e:
+  friendly_name: Loft Occupancy
+binary_sensor.motion_sensor_158d0001ae9fd0:
+  friendly_name: Bedroom Occupancy
+binary_sensor.door_window_sensor_158d0001e72b89:
+  friendly_name: Bedroom Door
+binary_sensor.motion_sensor_158d0001ae9fe9:
+  friendly_name: 2nd Bedroom Occupancy
+binary_sensor.door_window_sensor_158d0001e72c03:
+  friendly_name: 2nd Bedroom Door
+binary_sensor.motion_sensor_158d0001b192a4:
+  friendly_name: Living Room Occupancy
+binary_sensor.motion_sensor_158d0001de049c:
+  friendly_name: Dining Room Occupancy
+binary_sensor.water_leak_sensor_158d0001bb62cd:
+  friendly_name: Downstairs Water Leak Sensor
+sensor.temperature_158d0001f36845:
+  friendly_name: Loft Temperature
+sensor.humidity_158d0001f36845:
+  friendly_name: Loft Humidity
+  icon: mdi:water-percent
+light.gateway_light_7811dcb36941:
+  friendly_name: Gateway Light
+  icon: mdi:lamp
+binary_sensor.water_leak_sensor_158d0002150ba7:
+  friendly_name: Upstairs Water Leak Sensor
+  icon: mdi:water
+sensor.humidity_158d0001f41668:
+  friendly_name: Bedroom Humidity
+  icon: mdi:water-percent
+sensor.temperature_158d0001f41668:
+  friendly_name: Bedroom Temperature
+sensor.humidity_158d0001f36860:
+  friendly_name: 2nd Bedroom Humidity
+sensor.temperature_158d0001f36860:
+  friendly_name: 2nd Bedroom Temperature
+binary_sensor.cube_158d00010febde:
+  friendly_name: Control Cube
+sensor.humidity_158d0001c2c0f6:
+  friendly_name: Living Room Humidity
+sensor.temperature_158d0001c2c0f6:
+  friendly_name: Living Room Temperature
+sensor.temperature_158d00020291d1:
+  friendly_name: Dining Room Temperature
+sensor.humidity_158d00020291d1:
+  friendly_name: Dining Room Humidity
+camera.stairwell_camera:
+  friendly_name: Kitchen Camera

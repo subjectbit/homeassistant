@@ -1,0 +1,186 @@
+homeassistant:
+  name: Home Control
+  latitude: !secret lat
+  longitude: !secret long
+  elevation: !secret elevation
+  unit_system: imperial
+  time_zone:  !secret time_zone
+  customize: !include customize.yaml
+  whitelist_external_dirs:
+    - /tmp
+
+
+##########################################################
+## HTTP & Remote Access
+##########################################################
+
+http:
+  api_password: !secret http_password
+  base_url: !secret base_url
+  ip_ban_enabled: True
+  login_attempts_threshold: 3
+
+
+##########################################################
+## Shell Commands
+##########################################################
+
+shell_command:
+  restart_hass: 'curl http://127.0.0.1:8126/container/home-assistant/restart'
+  restart_watchtower: 'curl http://127.0.0.1:8126/container/watchtower/restart'
+  restart_portainer: 'curl http://127.0.0.1:8126/container/portainer/restart'
+  restart_organizr: 'curl http://127.0.0.1:8126/container/organizr/restart'
+  restart_grafana: 'curl http://127.0.0.1:8126/container/docker-influxdb-grafana/restart'
+  restart_caddy: 'curl http://127.0.0.1:8126/container/caddy/restart'
+  restart_mosquitto: 'curl http://127.0.0.1:8126/container/mosquitto/restart'
+
+
+##########################################################
+## Themes
+##########################################################
+
+frontend:
+  themes: !include themes.yaml
+  javascript_version: latest
+
+
+##########################################################
+## Cloud
+##########################################################
+
+cloud:
+  google_actions:
+    filter:
+      include_domains:
+        - light
+        - switch
+        - media_player  
+
+
+##########################################################
+## MQTT & DB's
+##########################################################
+
+mqtt:
+  broker: !secret mqtt_broker
+  client_id: homeassistant
+  username: !secret mqtt_username
+  password: !secret mqtt_password  
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'
+
+influxdb:
+  username: !secret influxdb_user
+  password: !secret influxdb_password
+  max_retries: 5
+
+
+##########################################################
+## Device Tracking
+##########################################################
+
+
+device_tracker:
+  - platform: nmap_tracker
+    hosts: 
+      - !secret nmap_host1
+      - !secret nmap_host2
+      - !secret nmap_host3
+    exclude:
+     - 192.168.86.200
+    home_interval: 2
+
+owntracks:
+  max_gps_accuracy: 75
+
+
+##########################################################
+## Xiaomi
+##########################################################
+
+xiaomi_aqara:
+  discovery_retry: 10
+  gateways:
+    - key: !secret xiaomi_key
+
+
+##########################################################
+## TP-Link
+##########################################################
+
+tplink:
+
+
+##########################################################
+## Notifications
+##########################################################
+
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_api
+    allowed_chat_ids:
+      - !secret chat_id
+
+notify:
+  - name: NOTIFIER_NAME
+    platform: telegram
+    chat_id: !secret chat_id
+
+
+##########################################################
+## TTS
+##########################################################
+
+tts:
+  - platform: google
+
+
+##########################################################
+## Custom Updater
+##########################################################
+
+custom_updater:
+  track:
+    - components
+    - cards
+
+
+##########################################################
+## Defaults
+##########################################################
+
+default_config:
+weather:
+  - platform: darksky
+    api_key: !secret darksky_api
+    mode: daily
+
+
+##########################################################
+## Timer for Zigbee2mqtt joining time remaining (120 sec = 2 min)
+##########################################################
+
+timer:
+  zigbee_permit_join:
+    name: Time remaining
+    duration: 120
+
+
+##########################################################
+## Include YAML's
+##########################################################
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+switch: !include switches.yaml
+sensor: !include sensors.yaml
+zone: !include zones.yaml
+light: !include lights.yaml
+camera: !include cameras.yaml
+media_player: !include media_player.yaml
+input_select: !include input_select.yaml
+input_boolean: !include input_boolean.yaml

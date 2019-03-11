@@ -1,0 +1,43 @@
+##########################################################
+## Restart Docker Containers
+##########################################################
+
+  restart_hass:
+    alias: 'Restart Home Assistant'
+    sequence:
+      - service: shell_command.restart_hass
+
+  restart_watchtower:
+    alias: 'Restart Watchtower'
+    sequence:
+      - service: shell_command.restart_watchtower
+
+  restart_portainer:
+    alias: 'Restart Portainer'
+    sequence:
+      - service: shell_command.restart_portainer
+
+  restart_organizr:
+    alias: 'Restart Organizr'
+    sequence:
+      - service: shell_command.restart_organizr
+
+  restart_grafana:
+    alias: 'Restart Grafana'
+    sequence:
+      - service: shell_command.restart_grafana
+
+  restart_caddy:
+    alias: 'Restart Caddy'
+    sequence:
+      - service: shell_command.restart_caddy
+
+  restart_mosquitto:
+    alias: 'Restart Mosquitto'
+    sequence:
+      - service: shell_command.restart_mosquitto
+
+  restart_nodered:
+    alias: 'Restart Node-Red'
+    sequence:
+      - service: shell_command.restart_nodered
