@@ -85,8 +85,13 @@
   action:
   - data:
       brightness_pct: '100'
-      color_name: blue
+      color_temp: '300'
       entity_id: light.loft_light
+      transition: '10'
+    service: light.turn_on
+  - data:
+      brightness_pct: '100'
+      entity_id: light.office
       transition: '10'
     service: light.turn_on
 - id: '1552190421061'
@@ -98,5 +103,19 @@
   condition: []
   action:
   - data:
+      entity_id: light.office
+    service: light.turn_off
+  - data:
+      entity_id: light.desk_light
+    service: light.turn_off
+  - data:
       entity_id: light.loft_light
     service: light.turn_off
+- id: '1552492002557'
+  alias: Enable automations whenever HASS starts
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - service: automation.turn_on
