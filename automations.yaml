@@ -19,6 +19,7 @@
     data:
       payload_template: '{{ states(''input_select.zigbee2mqtt_log_level'') }}'
       topic: zigbee2mqtt/bridge/config/log_level
+
 - id: enable_zigbee_join
   alias: Enable Zigbee joining
   hide_entity: true
@@ -34,6 +35,7 @@
   - service: timer.start
     data:
       entity_id: timer.zigbee_permit_join
+
 - id: disable_zigbee_join
   alias: Disable Zigbee joining
   hide_entity: true
@@ -49,6 +51,7 @@
   - data:
       entity_id: timer.zigbee_permit_join
     service: timer.cancel
+
 - id: disable_zigbee_join_timer
   alias: Disable Zigbee joining by timer
   hide_entity: true
@@ -65,6 +68,7 @@
   - service: input_boolean.turn_off
     data:
       entity_id: input_boolean.zigbee_permit_join
+
 - id: '1552181244155'
   alias: Set theme on start
   trigger:
@@ -75,42 +79,7 @@
   - data:
       name: clear
     service: frontend.set_theme
-- id: '1552190376218'
-  alias: Turn loft light on
-  trigger:
-  - entity_id: sensor.office_button
-    platform: state
-    to: single
-  condition: []
-  action:
-  - data:
-      brightness_pct: '100'
-      color_temp: '300'
-      entity_id: light.loft_light
-      transition: '10'
-    service: light.turn_on
-  - data:
-      brightness_pct: '100'
-      entity_id: light.office
-      transition: '10'
-    service: light.turn_on
-- id: '1552190421061'
-  alias: Turn loft light off
-  trigger:
-  - entity_id: sensor.office_button
-    platform: state
-    to: double
-  condition: []
-  action:
-  - data:
-      entity_id: light.office
-    service: light.turn_off
-  - data:
-      entity_id: light.desk_light
-    service: light.turn_off
-  - data:
-      entity_id: light.loft_light
-    service: light.turn_off
+
 - id: '1552492002557'
   alias: Enable automations whenever HASS starts
   trigger:
@@ -118,4 +87,6 @@
     platform: homeassistant
   condition: []
   action:
-  - service: automation.turn_on
+  - data:
+      entity_id: all
+    service: automation.turn_on
