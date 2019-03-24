@@ -4,5 +4,6 @@
 <summary>
 <b>Hardware</b>
 </summary>
-[Intel NUC](https://www.newegg.com/Product/ProductList.aspx?Description=nuc7i5bnh&Submit=ENE)
+<p><a href="https://www.newegg.com/Product/ProductList.aspx?Description=nuc7i5bnh&Submit=ENE">
+  Intel NUC</a></p>
 </details>
