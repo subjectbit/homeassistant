@@ -9,4 +9,15 @@
 <details>
     <summary>
   <b>Software</b>  </summary>
+  <p><strong>Docker Containers</strong></p> 
+  <ul>
+    <li><a href="https://hub.docker.com/r/homeassistant/home-assistant">Home Assistant</a></li>
+    <li><a href="https://hub.docker.com/r/portainer/portainer">Portainer</a></li>
+    <li><a href="https://hub.docker.com/_/eclipse-mosquitto">Mosquitto</a></li>
+    <li><a href="https://hub.docker.com/r/organizrtools/organizr-v2">Organizr</a></li>
+    <li><a href="https://hub.docker.com/r/plexinc/pms-docker">Plex</a></li>
+    <li><a href="https://hub.docker.com/r/abiosoft/caddy">Caddy</a></li>    
+    <li><a href="https://hub.docker.com/r/v2tec/watchtower">Watchtower</a></li> 
+    <li><a href="https://hub.docker.com/r/nodered/node-red-docker">Node-RED</a></li> 
+    
   </details
