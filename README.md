@@ -1,5 +1,4 @@
-# homeassistant
-Home Assistant setup
+# Home Assistant Setup
 
 <details>
 <summary>
