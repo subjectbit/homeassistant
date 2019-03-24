@@ -11,35 +11,6 @@
 
 
 ##########################################################
-## Travel Time
-##########################################################
-
-  - platform: waze_travel_time
-    origin: device_tracker.josiah_jv
-    destination: !secret primary_commute
-    region: 'US'
-    name: 'JV Work'
-
-  - platform: waze_travel_time
-    origin: device_tracker.josiah_jv
-    destination: !secret eta_home
-    region: 'US'
-    name: 'JV Home'
-
-  - platform: waze_travel_time
-    origin: device_tracker.mariel_mb
-    destination: !secret secondary_commute
-    region: 'US'
-    name: 'MB Work'
-
-  - platform: waze_travel_time
-    origin: device_tracker.mariel_mb
-    destination: !secret eta_home
-    region: 'US'
-    name: 'MB Home'
-
-
-##########################################################
 ## CPU Performance & Utilities
 ##########################################################          
   

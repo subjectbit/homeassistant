@@ -3,3 +3,34 @@
     name: 'Allow devices to join'
     initial: off
     icon: mdi:zigbee
+
+  common_area:
+    name: 'Common Area'
+    initial: on
+    icon: mdi:home-automation
+
+  master_bedroom:
+    name: 'Master Bedroom'
+    initial: on
+    icon: mdi:home-automation
+
+  second_bedroom:
+    name: 'Second Bedroom'
+    initial: on
+    icon: mdi:home-automation
+
+  kitchen:
+    name: 'Kitchen'
+    initial: on
+    icon: mdi:home-automation
+
+  office:
+    name: 'Office'
+    initial: on
+    icon: mdi:home-automation
+
+  basement:
+    name: 'Basement'
+    initial: on
+    icon: mdi:home-automation
+
