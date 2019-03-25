@@ -8,6 +8,11 @@
 </details>
 <details>
 <summary>
+  <b>Network</b></summary>
+  <p><a href="https://store.google.com/product/google_wifi">Google Wi-Fi</a></p>
+</details>
+<details>
+<summary>
   <b>Sensors</b></summary>
   <p><a href="https://www.aliexpress.com/item/New-Original-Xiaomi-Mijia-Human-Body-Sensor-Infrared-Smart-Home-Detector-Motion-Sensor-Safe-Moistureproof-15ms/32858852215.html?spm=2114.search0104.3.19.111f316b2zfoj2&ws_ab_test=searchweb0_0,searchweb201602_1_10065_10130_10068_10890_10547_319_10546_317_10548_10545_10696_453_10084_454_10083_10618_10307_537_536_10902_10059_10884_10887_321_322_10103,searchweb201603_57,ppcSwitch_0&algo_expid=cfc297f2-d6a6-4952-a632-a63ac3f66fdd-2&algo_pvid=cfc297f2-d6a6-4952-a632-a63ac3f66fdd">x15 Xiaomi Mijia Human Body Sensor</a></p>
   <p><a href="https://www.aliexpress.com/item/2019-Xiaomi-Mi-Smart-Temperature-and-Humidity-Sensor-Mini-Intelligent-Sensor-Put-the-baby-Home-office/32986664949.html?spm=2114.search0104.3.32.17e2205013KSAz&ws_ab_test=searchweb0_0,searchweb201602_1_10065_10130_10068_10890_10547_319_10546_317_10548_10545_10696_453_10084_454_10083_10618_10307_537_536_10902_10059_10884_10887_321_322_10103,searchweb201603_57,ppcSwitch_0&algo_expid=246f6dd6-c260-492f-82da-5b9358ca0864-7&algo_pvid=246f6dd6-c260-492f-82da-5b9358ca0864">x11 Xiaomi Mi Smart Temperature & Humidty</a></p>
