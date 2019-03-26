@@ -32,5 +32,6 @@
     <li><a href="https://hub.docker.com/r/plexinc/pms-docker">Plex</a></li>
     <li><a href="https://hub.docker.com/r/abiosoft/caddy">Caddy</a></li>    
     <li><a href="https://hub.docker.com/r/v2tec/watchtower">Watchtower</a></li> 
-    <li><a href="https://hub.docker.com/r/nodered/node-red-docker">Node-RED</a></li></ul>
+    <li><a href="https://hub.docker.com/r/nodered/node-red-docker">Node-RED</a></li>
+    <li><a href=https://github.com/Koenkk/zigbee2mqtt">Zigbee2mqtt</a></li></ul>
     </details>
