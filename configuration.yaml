@@ -192,3 +192,4 @@ camera: !include cameras.yaml
 media_player: !include media_player.yaml
 input_select: !include input_select.yaml
 input_boolean: !include input_boolean.yaml
+yeelight: !include yeelights.yaml

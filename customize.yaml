@@ -128,3 +128,6 @@ sensor.humidity_158d00020291d1:
   friendly_name: Dining Room Humidity
 camera.stairwell_camera:
   friendly_name: Kitchen Camera
+person.josiah: {}
+sensor.0x00124b0019369399_linkquality: {}
+device_tracker.josiah_jv: {}

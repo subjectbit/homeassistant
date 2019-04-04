@@ -41,3 +41,8 @@
     alias: 'Restart Node-Red'
     sequence:
       - service: shell_command.restart_nodered
+
+  restart_plex:
+    alias: 'Restart Plex'
+    sequence:
+      - service: shell_command.restart_plex
