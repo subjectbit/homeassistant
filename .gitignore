@@ -12,9 +12,11 @@ secrets.yaml
 known_devices.yaml
 ip_bans.yaml
 zones.yaml
+cameras.yaml
 plex.conf
 !.gitignore
 gitupdate.sh
+
 
 ##########################################################
 ## Folders
@@ -28,9 +30,3 @@ www/
 _uuid
 .HA_VERSION
 .cloud/
-
-##########################################################
-## Cameras
-##########################################################
-cameras
-cameras.yaml
