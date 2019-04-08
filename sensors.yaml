@@ -30,12 +30,9 @@
       - 'docker_active'
       - 'docker_cpu_use'
       - 'docker_memory_use'
-      - 'disk_free'
       - 'cpu_temp'
       - 'cpu_use_percent'
-      - 'memory_use'
       - 'memory_use_percent'
-      - 'memory_free'
       - 'disk_use_percent'
 
 
