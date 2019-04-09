@@ -14,9 +14,8 @@ ip_bans.yaml
 zones.yaml
 cameras.yaml
 plex.conf
-!.gitignore
 gitupdate.sh
-
+.gitignore
 
 ##########################################################
 ## Folders
