@@ -68,6 +68,7 @@ mqtt:
   client_id: homeassistant
   username: !secret mqtt_username
   password: !secret mqtt_password  
+  discovery: false
   birth_message:
     topic: 'hass/status'
     payload: 'online'
@@ -108,6 +109,18 @@ xiaomi_aqara:
   discovery_retry: 10
   gateways:
     - key: !secret xiaomi_key
+
+
+##########################################################
+## Recorder
+##########################################################
+
+recorder:
+  include:
+    domains:
+      - light
+      - media_player
+  purge_interval: 0
 
 
 ##########################################################
@@ -185,7 +198,7 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 switch: !include switches.yaml
-sensor: !include sensors.yaml
+sensor: !include_dir_merge_list sensors/
 zone: !include zones.yaml
 light: !include lights.yaml
 camera: !include cameras.yaml

@@ -15,7 +15,6 @@ zones.yaml
 cameras.yaml
 plex.conf
 gitupdate.sh
-.gitignore
 
 ##########################################################
 ## Folders
