@@ -1,0 +1,67 @@
+##########################################################
+## Google Wifi
+##########################################################
+
+  - platform: google_wifi
+    name: 'Wifi'
+    monitored_conditions:
+    - status
+    - uptime
+    - last_restart
+
+
+##########################################################
+## CPU Performance & Utilities
+##########################################################          
+  
+  - platform: cpuspeed      
+
+  - platform: time_date
+    display_options:
+      - time
+      - date
+
+  - platform: yr
+
+  - platform: glances
+    host: 192.168.86.200
+    version: 3
+    resources:
+      - 'docker_active'
+      - 'docker_cpu_use'
+      - 'docker_memory_use'
+      - 'cpu_temp'
+      - 'cpu_use_percent'
+      - 'memory_use_percent'
+      - 'disk_use_percent'
+
+
+##########################################################
+## Uptime
+##########################################################
+
+  - platform: uptime
+    name: Hub Uptime
+    unit_of_measurement: days
+
+
+
+##########################################################
+## Plex
+##########################################################
+
+  - platform: plex
+    token: !secret plex_token
+
+
+##########################################################
+## Zigbee2mqtt Bridge
+##########################################################
+
+  - platform: mqtt
+    name: Zigbee2mqtt Bridge state
+    state_topic: "zigbee2mqtt/bridge/state"
+    icon: mdi:zigbee
+
+
+

@@ -1,0 +1,178 @@
+##########################################################
+## Templates
+##########################################################
+
+  - platform: template
+    sensors:
+
+      sunset:
+        value_template: '{% set timestamp = as_timestamp(states.sun.sun.attributes.next_setting) | timestamp_custom("%I:%M") %} {{ timestamp.lstrip("0") }}'
+        unit_of_measurement: 'PM'
+
+      sunrise:
+        value_template: '{% set timestamp = as_timestamp(states.sun.sun.attributes.next_rising) | timestamp_custom("%I:%M") %} {{ timestamp.lstrip("0") }}'
+        unit_of_measurement: 'AM'
+
+      daylight:
+        value_template: >
+          {% set nr = as_timestamp(state_attr('sun.sun','next_rising')) %}
+          {% set ns = as_timestamp(state_attr('sun.sun','next_setting')) %}
+          {% if nr > ns %}
+            {% set nr = nr - 60*60*24 %}
+          {% endif %}
+          {{ (ns - nr)|timestamp_custom('%H:%M',false) }}
+
+  - platform: history_stats
+    name: 'Josiah time home this month'
+    entity_id: person.josiah
+    state: 'home'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'      
+
+  - platform: history_stats
+    name: 'Mariel time home this month'
+    entity_id: person.mariel
+    state: 'home'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'    
+
+  - platform: history_stats
+    name: 'Kylee time home this month'
+    entity_id: person.kylee
+    state: 'home'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'        
+
+
+##########################################################
+## DB Size & Version
+##########################################################
+
+  - platform: filesize
+    file_paths:
+      - /config/home-assistant_v2.db
+      - /config/home-assistant.log
+
+  - platform: version
+    name: Installed Version
+
+  - platform: rest
+    resource: https://api.github.com/repos/home-assistant/home-assistant/releases/latest
+    username: subjectbit
+    password: !secret github_token
+    authentication: basic
+    value_template: '{{ value_json.tag_name }}'
+    headers:
+      Accept: application/vnd.github.v3+json
+      Content-Type: application/json
+      User-Agent: Home Assistant REST sensor
+
+##########################################################
+## Sensor Counts
+##########################################################
+      sensor_count:
+        entity_id: []
+        friendly_name: 'Number of Sensors'
+        value_template: >
+          {%- set domains = ['sensor'] -%}
+          {%- for domain in domains -%}
+            {%- for item in states[domain] -%}
+              {% if loop.first %}
+                {{loop.length}}
+              {% endif %}
+            {%- endfor -%}
+          {%- endfor -%}
+
+      automation_count:
+        entity_id: []
+        friendly_name: 'Number of Native Automations'
+        value_template: >
+          {%- set domains = ['automation'] -%}
+          {%- for domain in domains -%}
+            {%- for item in states[domain] -%}
+              {% if loop.first %}
+                {{loop.length}}
+              {% endif %}
+            {%- endfor -%}
+          {%- endfor -%}
+
+      script_count:
+        entity_id: []
+        friendly_name: 'Number of Scripts'
+        value_template: >
+          {%- set domains = ['script'] -%}
+          {%- for domain in domains -%}
+            {%- for item in states[domain] -%}
+              {% if loop.first %}
+                {{loop.length}}
+              {% endif %}
+            {%- endfor -%}
+          {%- endfor -%}
+
+      switch_count:
+        entity_id: []
+        friendly_name: 'Number of Switches'
+        value_template: >
+          {%- set domains = ['switch'] -%}
+          {%- for domain in domains -%}
+            {%- for item in states[domain] -%}
+              {% if loop.first %}
+                {{loop.length}}
+              {% endif %}
+            {%- endfor -%}
+          {%- endfor -%}
+
+      binary_sensor_count:
+        entity_id: []
+        friendly_name: 'Number of Binary Sensors'
+        value_template: >
+          {%- set domains = ['binary_sensor'] -%}
+          {%- for domain in domains -%}
+            {%- for item in states[domain] -%}
+              {% if loop.first %}
+                {{loop.length}}
+              {% endif %}
+            {%- endfor -%}
+          {%- endfor -%}
+
+      lights_count:
+        entity_id: []
+        friendly_name: 'Number of Lights'
+        value_template: >
+          {%- set domains = ['light'] -%}
+          {%- for domain in domains -%}
+            {%- for item in states[domain] -%}
+              {% if loop.first %}
+                {{loop.length}}
+              {% endif %}
+            {%- endfor -%}
+          {%- endfor -%}
+
+      tracker_count:
+        entity_id: []
+        friendly_name: 'Number of Devices'
+        value_template: >
+          {%- set domains = ['device_tracker'] -%}
+          {%- for domain in domains -%}
+            {%- for item in states[domain] -%}
+              {% if loop.first %}
+                {{loop.length}}
+              {% endif %}
+            {%- endfor -%}
+          {%- endfor -%}
+
+      media_player_count:
+        entity_id: []
+        friendly_name: 'Number of Media Players'
+        value_template: >
+          {%- set domains = ['media_player'] -%}
+          {%- for domain in domains -%}
+            {%- for item in states[domain] -%}
+              {% if loop.first %}
+                {{loop.length}}
+              {% endif %}
+            {%- endfor -%}
+          {%- endfor -%}
