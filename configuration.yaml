@@ -8,6 +8,7 @@ homeassistant:
   customize: !include customize.yaml
   whitelist_external_dirs:
     - /tmp
+    - /config
 
 
 ##########################################################
@@ -112,14 +113,22 @@ xiaomi_aqara:
 
 
 ##########################################################
-## Recorder
+## History & Recorder Settings
 ##########################################################
+
+history: 
+  include:
+    domains:
+      - light
+      - media_player
+      - person
 
 recorder:
   include:
     domains:
       - light
       - media_player
+      - person
   purge_interval: 0
 
 

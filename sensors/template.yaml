@@ -22,57 +22,10 @@
           {% endif %}
           {{ (ns - nr)|timestamp_custom('%H:%M',false) }}
 
-  - platform: history_stats
-    name: 'Josiah time home this month'
-    entity_id: person.josiah
-    state: 'home'
-    type: time
-    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
-    end: '{{ now() }}'      
-
-  - platform: history_stats
-    name: 'Mariel time home this month'
-    entity_id: person.mariel
-    state: 'home'
-    type: time
-    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
-    end: '{{ now() }}'    
-
-  - platform: history_stats
-    name: 'Kylee time home this month'
-    entity_id: person.kylee
-    state: 'home'
-    type: time
-    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
-    end: '{{ now() }}'        
-
-
-##########################################################
-## DB Size & Version
-##########################################################
-
-  - platform: filesize
-    file_paths:
-      - /config/home-assistant_v2.db
-      - /config/home-assistant.log
-
-  - platform: version
-    name: Installed Version
-
-  - platform: rest
-    resource: https://api.github.com/repos/home-assistant/home-assistant/releases/latest
-    username: subjectbit
-    password: !secret github_token
-    authentication: basic
-    value_template: '{{ value_json.tag_name }}'
-    headers:
-      Accept: application/vnd.github.v3+json
-      Content-Type: application/json
-      User-Agent: Home Assistant REST sensor
-
 ##########################################################
 ## Sensor Counts
 ##########################################################
+
       sensor_count:
         entity_id: []
         friendly_name: 'Number of Sensors'
@@ -176,3 +129,57 @@
               {% endif %}
             {%- endfor -%}
           {%- endfor -%}
+
+
+##########################################################
+## History Stats
+##########################################################
+
+  - platform: history_stats
+    name: 'Josiah time home this month'
+    entity_id: person.josiah
+    state: 'home'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'      
+
+  - platform: history_stats
+    name: 'Mariel time home this month'
+    entity_id: person.mariel
+    state: 'home'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'    
+
+  - platform: history_stats
+    name: 'Kylee time home this month'
+    entity_id: person.kylee
+    state: 'home'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'        
+
+
+##########################################################
+## DB Size & Version
+##########################################################
+
+  - platform: filesize
+    file_paths:
+      - '/config/home-assistant_v2.db'
+      - '/config/home-assistant.log'
+
+  - platform: version
+    name: Installed Version
+
+  - platform: rest
+    resource: https://api.github.com/repos/home-assistant/home-assistant/releases/latest
+    username: subjectbit
+    password: !secret github_token
+    authentication: basic
+    value_template: '{{ value_json.tag_name }}'
+    name: 'Latest HA Version'
+    headers:
+      Accept: application/vnd.github.v3+json
+      Content-Type: application/json
+      User-Agent: Home Assistant REST sensor

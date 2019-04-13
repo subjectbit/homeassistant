@@ -1,5 +1,4 @@
-# Home Assistant Setup
-
+# My Home Assistant Setup
 <details>
 <summary>
   <b>Compute & Detection</b></summary>
