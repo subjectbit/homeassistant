@@ -87,7 +87,6 @@ influxdb:
 ## Device Tracking
 ##########################################################
 
-
 device_tracker:
   - platform: nmap_tracker
     hosts: 
