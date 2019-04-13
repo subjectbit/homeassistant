@@ -138,3 +138,23 @@ person.kylee:
   entity_picture: /local/pictures/mariel.png
 binary_sensor.door_window_2nd_bedroom:
   friendly_name: binary_sensor.door_window_2nd_bedroom
+sensor.binary_sensor_count:
+  icon: mdi:motion-sensor
+sensor.tracker_count:
+  icon: mdi:tablet-cellphone
+sensor.lights_count:
+  icon: mdi:lightbulb
+sensor.media_player_count:
+  icon: mdi:google-home
+sensor.automation_count:
+  icon: mdi:home-automation
+sensor.script_count:
+  icon: mdi:script
+sensor.sensor_count:
+  icon: mdi:leak
+sensor.switch_count:
+  icon: mdi:toggle-switch
+sensor.latest_ha_version:
+  icon: mdi:github-box
+sensor.installed_version:
+  icon: mdi:package-down

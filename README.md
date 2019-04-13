@@ -1,6 +1,6 @@
 # My Home Assistant Setup
 <details>
-<summary>
+##<summary>
   <b>Compute & Detection</b></summary>
   <ul>
   <li><a href="https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc7i5bnh.html">Intel NUC</a></li>
@@ -8,12 +8,12 @@
   </ul>
 </details>
 <details>
-<summary>
+##<summary>
   <b>Network</b></summary>
   <p><a href="https://store.google.com/product/google_wifi">Google Wi-Fi</a></p>
 </details>
 <details>
-<summary>
+##<summary>
   <b>Sensors</b></summary>
   <p>I like using Xiaomi sensors as they're cheap, reliable, and portable. This is especially relevant to my use case as I bought the majority of the sensors used in my setup as a renter. I'm in the process of building a house and these sensors will be quick to pack up and set-up in the new house. I don't trust the original Xioami gateway, which often phones home to China so I blocked internet access to the gateway, which acts as the Zigbee coordinator. Eventually, I'll remove the gateway altogether and just use Zigbee2mqtt as a bridge between each device and Home Assistant</p>
   <ul>
@@ -24,7 +24,7 @@
   </ul>
 </details>
 <details>
-    <summary>
+##    <summary>
   <b>Software</b>  </summary>
     <p><strong>OS</strong></p><p><a href="http://releases.ubuntu.com/18.04/">Ubuntu 18.04 LTS</a></p>
   <p><strong>Docker Containers</strong></p> 
@@ -40,7 +40,27 @@
     <li><a href=https://github.com/Koenkk/zigbee2mqtt">Zigbee2mqtt</a></li></ul>
     </details>
 
-# Front End Screen Shots:
+# UI
+## Overview
+<p align="center">
+  <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/overview_ui.png">
+</p>
+## Office
+<p align="center">
+  <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/office_ui.png">
+</p>
+## Kitchen
+<p align="center">
+  <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/kitchen_ui.png">
+</p>
+## Common Area
+<p align="center">
+  <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/common_area_ui.png">
+</p>
+## Bedrooms
+<p align="center">
+  <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/bedrooms_ui.png">
+</p>
 ## Settings
 <p align="center">
   <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/settings_ui.png">
