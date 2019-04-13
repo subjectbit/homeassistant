@@ -69,7 +69,7 @@ mqtt:
   client_id: homeassistant
   username: !secret mqtt_username
   password: !secret mqtt_password  
-  discovery: false
+  discovery: true
   birth_message:
     topic: 'hass/status'
     payload: 'online'
@@ -80,7 +80,7 @@ mqtt:
 influxdb:
   username: !secret influxdb_user
   password: !secret influxdb_password
-  max_retries: 5
+  max_retries: 10
 
 
 ##########################################################
@@ -191,13 +191,18 @@ weather:
 
 
 ##########################################################
-## Timer for Zigbee2mqtt joining time remaining (120 sec = 2 min)
+## Zigbee Network Map
 ##########################################################
 
-timer:
-  zigbee_permit_join:
-    name: Time remaining
-    duration: 120
+webhook:
+ 
+zigbee2mqtt_networkmap:
+ 
+panel_iframe:
+  networkmap:
+    title: 'Zigbee Map'
+    url: '/local/zigbee2mqtt_networkmap/map.html'
+    icon: 'mdi:graphql'
 
 
 ##########################################################
