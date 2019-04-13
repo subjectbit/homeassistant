@@ -43,13 +43,13 @@
 # UI Screenshots
 
 ## Overview
-
+<p>The overview page dynamically shows entiteies based on their states. For example, only people who are home or entities that are on are displayed.</p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/overview_ui.png">
 </p>
 
 ## Office
-
+<p>Each area tab is setup in a simliar way displaying any motion/door sensors, lighting, then media players, and finally any climate data.</p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/office_ui.png">
 </p>
