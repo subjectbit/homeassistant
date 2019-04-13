@@ -39,3 +39,10 @@
     <li><a href="https://hub.docker.com/r/nodered/node-red-docker">Node-RED</a></li>
     <li><a href=https://github.com/Koenkk/zigbee2mqtt">Zigbee2mqtt</a></li></ul>
     </details>
+
+# Front End Screen Shots:
+## Settings
+<p align="center">
+  <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/settings_ui.png">
+</p>
+
