@@ -1,0 +1,15 @@
+##########################################################
+## Tensorflow
+##########################################################
+- platform: tensorflow
+  scan_interval: 604800
+  source:
+    - entity_id: camera.loft_camera
+  file_out:
+    - "/config/www/tensorflow/{{ camera_entity.split('.')[1] }}_latest.jpg"
+    - "/config/www/tensorflow/{{ camera_entity.split('.')[1] }}_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+  model:
+    graph: /config/tensorflow/frozen_inference_graph.pb
+    categories: 
+      - dog
+      - person

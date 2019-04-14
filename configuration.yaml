@@ -121,13 +121,18 @@ history:
       - light
       - media_player
       - person
-
+      - sensor
+      - binary_sensor
+      - image_processing
 recorder:
   include:
     domains:
       - light
       - media_player
       - person
+      - sensor
+      - binary_sensor
+      - image_processing
   purge_interval: 0
 
 
@@ -208,6 +213,7 @@ panel_iframe:
 ## Include YAML's
 ##########################################################
 group: !include groups.yaml
+image_processing: !include image_processing.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 switch: !include switches.yaml

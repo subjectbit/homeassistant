@@ -158,3 +158,9 @@ sensor.latest_ha_version:
   icon: mdi:github-box
 sensor.installed_version:
   icon: mdi:package-down
+sensor.josiah:
+  friendly_name: Josiah's Commute Time
+sensor.mariel:
+  friendly_name: Mariel's Commute Time
+light.living_room_ambience:
+  friendly_name: Ambience Strip

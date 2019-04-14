@@ -29,3 +29,4 @@ www/
 _uuid
 .HA_VERSION
 .cloud/
+tensorflow/

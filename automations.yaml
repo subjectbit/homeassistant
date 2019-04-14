@@ -19,7 +19,6 @@
     data:
       payload_template: '{{ states(''input_select.zigbee2mqtt_log_level'') }}'
       topic: zigbee2mqtt/bridge/config/log_level
-
 - id: '1552181244155'
   alias: Set theme on start
   trigger:
@@ -30,7 +29,6 @@
   - data:
       name: clear
     service: frontend.set_theme
-
 - id: '1552492002557'
   alias: Enable automations whenever HASS starts
   trigger:
@@ -41,3 +39,14 @@
   - data:
       entity_id: all
     service: automation.turn_on
+- id: '1555251498146'
+  alias: Office image capture on motion detection
+  trigger:
+  - entity_id: binary_sensor.office_motion
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      entity_id: image_processing.tensorflow_loft_camera
+    service: image_processing.scan
