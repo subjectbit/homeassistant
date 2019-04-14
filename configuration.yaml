@@ -9,24 +9,24 @@ homeassistant:
   whitelist_external_dirs:
     - /tmp
     - /config
-
-
-##########################################################
-## Authentication & Remote Access
-##########################################################
-
   auth_providers:
     - type: homeassistant
 
+##########################################################
+## Remote Access & IP Ban
+##########################################################
+
+
 http:
   base_url: !secret base_url
-  ip_ban_enabled: True
+  ip_ban_enabled: true
   login_attempts_threshold: 3
 
 
 ##########################################################
 ## Shell Commands
 ##########################################################
+
 
 shell_command:
   restart_hass: 'curl http://127.0.0.1:8126/container/home-assistant/restart'
@@ -42,6 +42,7 @@ shell_command:
 ## Themes
 ##########################################################
 
+
 frontend:
   themes: !include themes.yaml
   javascript_version: latest
@@ -50,6 +51,7 @@ frontend:
 ##########################################################
 ## Cloud
 ##########################################################
+
 
 cloud:
   google_actions:
@@ -63,6 +65,7 @@ cloud:
 ##########################################################
 ## MQTT & DB's
 ##########################################################
+
 
 mqtt:
   broker: !secret mqtt_broker
@@ -87,6 +90,7 @@ influxdb:
 ## Device Tracking
 ##########################################################
 
+
 device_tracker:
   - platform: nmap_tracker
     hosts: 
@@ -105,6 +109,7 @@ owntracks:
 ## Xiaomi
 ##########################################################
 
+
 xiaomi_aqara:
   discovery_retry: 10
   gateways:
@@ -115,6 +120,7 @@ xiaomi_aqara:
 ## History & Recorder Settings
 ##########################################################
 
+
 history: 
   include:
     domains:
@@ -123,7 +129,18 @@ history:
       - person
       - sensor
       - binary_sensor
-      - image_processing
+      - image_processing  
+  exclude:
+    entities:
+      - sensor.yr_symbol
+      - sun.sun
+      - sensor.zigbee2mqtt_bridge_state
+      - sensor.time
+      - sensor.sunrise
+      - sensor.sunset
+      - sensor.date
+      - sensor.custom_card_tracker
+      
 recorder:
   include:
     domains:
@@ -132,7 +149,17 @@ recorder:
       - person
       - sensor
       - binary_sensor
-      - image_processing
+      - image_processing  
+  exclude:
+    entities:
+      - sensor.yr_symbol
+      - sun.sun
+      - sensor.zigbee2mqtt_bridge_state
+      - sensor.time
+      - sensor.sunrise
+      - sensor.sunset
+      - sensor.date
+      - sensor.custom_card_tracker
   purge_interval: 0
 
 
@@ -140,12 +167,14 @@ recorder:
 ## TP-Link
 ##########################################################
 
+
 tplink:
 
 
 ##########################################################
 ## Notifications
 ##########################################################
+
 
 telegram_bot:
   - platform: polling
@@ -163,6 +192,7 @@ notify:
 ## TTS
 ##########################################################
 
+
 tts:
   - platform: google
 
@@ -170,6 +200,7 @@ tts:
 ##########################################################
 ## Custom Updater
 ##########################################################
+
 
 custom_updater:
   track:
@@ -181,12 +212,14 @@ custom_updater:
 ## Defaults
 ##########################################################
 
+
 default_config:
 stream:
 
 ##########################################################
 ## Weather
 ##########################################################
+
 
 weather:
   - platform: darksky
@@ -197,6 +230,7 @@ weather:
 ##########################################################
 ## Zigbee Network Map
 ##########################################################
+
 
 webhook:
  
@@ -212,6 +246,8 @@ panel_iframe:
 ##########################################################
 ## Include YAML's
 ##########################################################
+
+
 group: !include groups.yaml
 image_processing: !include image_processing.yaml
 automation: !include automations.yaml

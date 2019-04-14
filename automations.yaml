@@ -39,14 +39,3 @@
   - data:
       entity_id: all
     service: automation.turn_on
-- id: '1555251498146'
-  alias: Office image capture on motion detection
-  trigger:
-  - entity_id: binary_sensor.office_motion
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - data:
-      entity_id: image_processing.tensorflow_loft_camera
-    service: image_processing.scan
