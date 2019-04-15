@@ -21,6 +21,7 @@
             {% set nr = nr - 60*60*24 %}
           {% endif %}
           {{ (ns - nr)|timestamp_custom('%H:%M',false) }}
+      
 
 ##########################################################
 ## Sensor Counts
@@ -131,6 +132,7 @@
           {%- endfor -%}
 
 
+
 ##########################################################
 ## History Stats
 ##########################################################
@@ -167,10 +169,23 @@
   - platform: filesize
     file_paths:
       - '/config/home-assistant_v2.db'
-      - '/config/home-assistant.log'
 
   - platform: version
     name: Installed Version
+
+  - platform: template
+    sensors:
+      db_size:
+        unit_of_measurement: 'GB/s'
+        value_template: "{{ (states('sensor.home_assistant_v2_db')| float) / 1024}}"
+
+  - platform: template
+    sensors:
+      db_size_gb:
+        friendly_name: "Home Assistant DB Size"
+        unit_of_measurement: 'GB/s'
+        value_template: "{{ states('sensor.db_size')| round(1)}}"        
+
 
   - platform: rest
     resource: https://api.github.com/repos/home-assistant/home-assistant/releases/latest

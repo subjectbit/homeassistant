@@ -164,3 +164,5 @@ sensor.mariel:
   friendly_name: Mariel's Commute Time
 light.living_room_ambience:
   friendly_name: Ambience Strip
+sensor.db_size:
+  hidden: true
