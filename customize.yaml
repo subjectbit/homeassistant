@@ -166,3 +166,5 @@ light.living_room_ambience:
   friendly_name: Ambience Strip
 sensor.db_size:
   hidden: true
+switch.candles:
+  icon: mdi:candle

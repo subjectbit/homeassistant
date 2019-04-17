@@ -2,6 +2,7 @@
 ## HA Docker Control
 ##########################################################
 
+
   - platform: rest
     resource: http://127.0.0.1:8126/container/watchtower
     name: Watchtower
@@ -57,6 +58,7 @@
 ## Zigbee2mqtt Join 
 ##########################################################
 
+
   - platform: mqtt
     name: "Zigbee2mqtt Main join"
     state_topic: "zigbee2mqtt/bridge/config/permit_join"
@@ -65,3 +67,19 @@
     payload_off: "false"
 
 
+
+##########################################################
+## Broadlink IR Control
+##########################################################
+
+
+  - platform: broadlink
+    host: 192.168.86.30
+    mac: '34:ea:34:40:8b:33'
+    timeout: 15
+    type: rm_mini
+    switches:
+      candles:
+        friendly_name: "Candles"
+        command_on: "JgBYAAABLJQTEhMSFBISOBMSEhQRExQSETkTOBI4EhMSOBI4FBISOBITEhQRExQSERQSExQSEhMSOBM3FDcSOBI4EzgTNxI4FAAFSAABKkwSAAxiAAEsShMADQU=="
+        command_off: "JgBgAAABLJQUERMTERQTNxITFBIUERIUEzYSORQ2FBEVNRU1ExQTNhITFTUTExQSFBERFBQSExESORQREjgVNRU1EzgVNRU1EwAFSQABK0sUAAxgAAEsSRQADGAAAS1IFQANBQAAAAAAAAAA=="
