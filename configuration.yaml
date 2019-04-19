@@ -212,6 +212,7 @@ custom_updater:
 
 default_config:
 stream:
+ffmpeg:
 
 ##########################################################
 ## Weather
@@ -255,7 +256,7 @@ binary_sensor: !include_dir_merge_list binary_sensors/
 zone: !include zones.yaml
 light: !include_dir_merge_list lights/
 yeelight: !include lights/yeelights.yaml
-camera: !include cameras.yaml
+camera: !include_dir_merge_list cameras/
 media_player: !include media_player.yaml
 input_select: !include input_select.yaml
 input_boolean: !include input_boolean.yaml

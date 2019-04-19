@@ -1,9 +1,22 @@
+ 
   - platform: template
     sensors:
-      people_home:
+      adult_home:
         friendly_name: "Adult Home?"
         value_template: >
           {{ is_state('person.josiah', 'home') or
              is_state('person.mariel', 'home') }}
         device_class: presence
         icon_template: mdi:human-male-female
+
+
+  - platform: template
+    sensors:
+      anyone_home:
+        friendly_name: "Anyone Home?"
+        value_template: >
+          {{ is_state('person.josiah', 'home') or
+             is_state('person.mariel', 'home') or
+             is_state('person.kylee', 'home') }}
+        device_class: presence
+        icon_template: mdi:human-male-girl
