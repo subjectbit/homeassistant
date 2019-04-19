@@ -101,9 +101,6 @@ device_tracker:
      - 192.168.86.200
     home_interval: 2
 
-owntracks:
-  max_gps_accuracy: 75
-
 
 ##########################################################
 ## Xiaomi
@@ -256,9 +253,9 @@ switch: !include switches.yaml
 sensor: !include_dir_merge_list sensors/
 binary_sensor: !include_dir_merge_list binary_sensors/
 zone: !include zones.yaml
-light: !include lights.yaml
+light: !include_dir_merge_list lights/
+yeelight: !include lights/yeelights.yaml
 camera: !include cameras.yaml
 media_player: !include media_player.yaml
 input_select: !include input_select.yaml
 input_boolean: !include input_boolean.yaml
-yeelight: !include yeelights.yaml
