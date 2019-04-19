@@ -1,0 +1,28 @@
+##########################################################
+## CPU Performance & Utilities
+##########################################################          
+
+- platform: cpuspeed      
+
+- platform: time_date
+  display_options:
+    - time
+    - date
+
+- platform: yr
+
+- platform: uptime
+  name: Hub Uptime
+  unit_of_measurement: days
+
+#- platform: glances
+#  host: ip goes here
+#  version: 3
+#  resources:
+#    - 'docker_active'
+#    - 'docker_cpu_use'
+#    - 'docker_memory_use'
+#    - 'cpu_temp'
+#    - 'cpu_use_percent'
+#    - 'memory_use_percent'
+#    - 'disk_use_percent'

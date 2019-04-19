@@ -1,0 +1,15 @@
+##########################################################
+## Waze Commute Times
+##########################################################
+
+- platform: waze_travel_time
+  origin: person.josiah
+  destination: zone.work
+  region: 'US'
+  name: "Josiah" 
+
+- platform: waze_travel_time
+  origin: person.mariel
+  destination: zone.work
+  region: 'US'
+  name: "Mariel"
