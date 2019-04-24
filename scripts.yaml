@@ -46,3 +46,8 @@
     alias: 'Restart Plex'
     sequence:
       - service: shell_command.restart_plex
+  
+  restart_zigbee2mqtt:
+    alias: 'Restart Zigbee2mqtt'
+    sequence:
+      - service: shell_command.restart_zigbee2mqtt

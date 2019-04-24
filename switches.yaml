@@ -4,68 +4,60 @@
 
 
   - platform: rest
-    resource: http://127.0.0.1:8126/container/watchtower
+    resource: http://192.168.86.200:8126/container/watchtower
     name: Watchtower
     body_on: '{"state": "start"}'
     body_off: '{"state": "stop"}'
     is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
 
   - platform: rest
-    resource: http://127.0.0.1:8126/container/portainer
+    resource: http://192.168.86.200:8126/container/portainer
     name: Portainer
     body_on: '{"state": "start"}'
     body_off: '{"state": "stop"}'
     is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
 
   - platform: rest
-    resource: http://127.0.0.1:8126/container/caddy
+    resource: http://192.168.86.200:8126/container/caddy
     name: Caddy
     body_on: '{"state": "start"}'
     body_off: '{"state": "stop"}'
     is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
 
   - platform: rest
-    resource: http://127.0.0.1:8126/container/mosquitto
+    resource: http://192.168.86.200:8126/container/mosquitto
     name: Mosquitto
     body_on: '{"state": "start"}'
     body_off: '{"state": "stop"}'
     is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
 
   - platform: rest
-    resource: http://127.0.0.1:8126/container/node-red
+    resource: http://192.168.86.200:8126/container/node-red
     name: Node-Red
     body_on: '{"state": "start"}'
     body_off: '{"state": "stop"}'
     is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
 
   - platform: rest
-    resource: http://127.0.0.1:8126/container/glances
+    resource: http://192.168.86.200:8126/container/glances
     name: Glances
     body_on: '{"state": "start"}'
     body_off: '{"state": "stop"}'
     is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
 
   - platform: rest
-    resource: http://127.0.0.1:8126/container/organizr
+    resource: http://192.168.86.200:8126/container/organizr
     name: Organizr
     body_on: '{"state": "start"}'
     body_off: '{"state": "stop"}'
     is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
 
-
-
-##########################################################
-## Zigbee2mqtt Join 
-##########################################################
-
-
-  - platform: mqtt
-    name: "Zigbee2mqtt Main join"
-    state_topic: "zigbee2mqtt/bridge/config/permit_join"
-    command_topic: "zigbee2mqtt/bridge/config/permit_join"
-    payload_on: "true"
-    payload_off: "false"
-
+  - platform: rest
+    resource: http://192.168.86.200:8126/container/zigbee2mqtt
+    name: Zigbee2mqtt
+    body_on: '{"state": "start"}'
+    body_off: '{"state": "stop"}'
+    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
 
 
 ##########################################################

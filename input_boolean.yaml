@@ -1,8 +1,4 @@
 # Input boolean for enabling/disabling joining
-  zigbee_permit_join:
-    name: 'Allow devices to join'
-    initial: off
-    icon: mdi:zigbee
 
   common_area:
     name: 'Common Area'
@@ -32,5 +28,10 @@
   basement:
     name: 'Basement'
     initial: on
+    icon: mdi:home-automation
+  
+  global:
+    name: 'Global'
+    initial: off
     icon: mdi:home-automation
 

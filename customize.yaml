@@ -38,32 +38,30 @@ sensor.wifi_status:
   friendly_name: Wi-Fi Status
 sensor.wifi_uptime:
   friendly_name: Wi-Fi Uptime
-light.jv_nightstand:
-  friendly_name: JV Nightstand
-  icon: mdi:lamp
 light.mb_nightstand:
   friendly_name: MB Nightstand
-  icon: mdi:lamp
+  icon: mdi:lightbulb
 switch.kylees_lamp:
   friendly_name: Kylee's Desk Light
-  icon: mdi:lamp
+  icon: mdi:lightbulb
 light.loft_light:
   friendly_name: Loft Light
-  icon: mdi:lamp
+  icon: mdi:lightbulb
 switch.living_room_lamp:
   friendly_name: Living Room Light
-  icon: mdi:lamp
+  icon: mdi:lightbulb
 light.kylees_bedroom_light:
-  icon: mdi:lamp
+  icon: mdi:lightbulb
 light.desk_light:
-  icon: mdi:lamp
+  icon: mdi:lightbulb
 light.loft_fan_light:
-  icon: mdi:lamp
+  icon: mdi:lightbulb
 sensor.illumination_7811dcb36941:
   friendly_name: Loft Gateway Light
+  icon: mdi:lightbulb
 light.yeelight_strip_7811dc686a5d:
   friendly_name: Living Room Ambience
-  icon: mdi:lamp
+  icon: mdi:lightbulb
 binary_sensor.switch_158d0002016f71:
   friendly_name: Bedroom Wireless Switch
 binary_sensor.switch_158d0001f400d1:
@@ -103,7 +101,7 @@ sensor.humidity_158d0001f36845:
   icon: mdi:water-percent
 light.gateway_light_7811dcb36941:
   friendly_name: Gateway Light
-  icon: mdi:lamp
+  icon: mdi:lightbulb
 binary_sensor.water_leak_sensor_158d0002150ba7:
   friendly_name: Upstairs Water Leak Sensor
   icon: mdi:water
@@ -133,9 +131,9 @@ person.josiah:
 sensor.0x00124b0019369399_linkquality: {}
 device_tracker.josiah_jv: {}
 person.mariel:
-  entity_picture: /local/pictures/mariel.png
+  entity_picture: /local/pictures/mariel.jpg
 person.kylee:
-  entity_picture: /local/pictures/mariel.png
+  entity_picture: /local/pictures/kylee.jpg
 binary_sensor.door_window_2nd_bedroom:
   friendly_name: binary_sensor.door_window_2nd_bedroom
 sensor.binary_sensor_count:
@@ -164,7 +162,18 @@ sensor.mariel:
   friendly_name: Mariel's Commute Time
 light.living_room_ambience:
   friendly_name: Ambience Strip
+  icon: mdi:lightbulb
 sensor.db_size:
   hidden: true
 switch.candles:
   icon: mdi:candle
+light.master_bedroom_mb_nightstand:
+  icon: mdi:lightbulb
+light.office:
+  icon: mdi:lightbulb
+media_player.living_room_tv:
+  icon: mdi:television
+media_player.vizio_smartcast:
+  icon: mdi:television
+sensor.plex:
+  icon: mdi:plex
