@@ -219,6 +219,7 @@ script.restart_portainer:
 script.restart_grafana:
   icon: mdi:restart
 
+
 ##########################################################
 ## Lights
 ##########################################################
@@ -235,23 +236,19 @@ light.loft_light:
 light.desk_light:
   icon: mdi:lightbulb
 
-sensor.illumination_7811dcb36941:
-  friendly_name: Loft Gateway Light
-  icon: mdi:lightbulb
-
 light.yeelight_strip_7811dc686a5d:
   friendly_name: Living Room Ambience
   icon: mdi:lightbulb
 
-light.gateway_light_7811dcb36941:
+light.gateway:
   friendly_name: Gateway Light
+  icon: mdi:lightbulb
+
+light.office:
+  friendly_name: Office Light
   icon: mdi:lightbulb
 
 
 ##########################################################
 ## Cameras
 ##########################################################
-
-
-camera.stairwell_camera:
-  friendly_name: Kitchen Camera

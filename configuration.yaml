@@ -74,7 +74,7 @@ mqtt:
   client_id: homeassistant
   username: !secret mqtt_username
   password: !secret mqtt_password  
-  discovery: false
+  discovery: true
   birth_message:
     topic: 'hass/status'
     payload: 'online'
@@ -242,10 +242,11 @@ weather:
 ## Zigbee Home Automation
 ##########################################################
 
+# re-enable when ZHA is ready for prime time
 
-zha:
-  usb_path: /dev/ttyUSB1
-  database_path: /config/zigbee.db
+#zha:
+#  usb_path: /dev/ttyUSB1
+#  database_path: /config/zigbee.db
 
 
 ##########################################################
