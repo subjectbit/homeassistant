@@ -33,7 +33,6 @@ shell_command:
   restart_ouroboros: "curl http://127.0.0.1:8126/container/ouroboros/restart"
   restart_portainer: "curl http://127.0.0.1:8126/container/portainer/restart"
   restart_organizr: "curl http://127.0.0.1:8126/container/organizr/restart"
-  restart_grafana: "curl http://127.0.0.1:8126/container/docker-influxdb-grafana/restart"
   restart_caddy: "curl http://127.0.0.1:8126/container/caddy/restart"
   restart_mosquitto: "curl http://127.0.0.1:8126/container/mosquitto/restart"
   restart_nodered: "curl http://127.0.0.1:8126/container/node-red/restart"
@@ -60,8 +59,10 @@ cloud:
     filter:
       include_domains:
         - light
-        - switch
-        - media_player  
+        - media_player
+        - input_boolean
+      include_entities: 
+        - switch.candle
 
 
 ##########################################################
@@ -81,11 +82,6 @@ mqtt:
   will_message:
     topic: 'hass/status'
     payload: 'offline'
-
-influxdb:
-  username: !secret influxdb_user
-  password: !secret influxdb_password
-  max_retries: 10
 
 
 ##########################################################
