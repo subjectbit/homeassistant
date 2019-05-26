@@ -24,22 +24,6 @@ http:
 
 
 ##########################################################
-## Shell Commands
-##########################################################
-
-
-shell_command:
-  restart_hass: "curl http://127.0.0.1:8126/container/home-assistant/restart"
-  restart_ouroboros: "curl http://127.0.0.1:8126/container/ouroboros/restart"
-  restart_portainer: "curl http://127.0.0.1:8126/container/portainer/restart"
-  restart_organizr: "curl http://127.0.0.1:8126/container/organizr/restart"
-  restart_caddy: "curl http://127.0.0.1:8126/container/caddy/restart"
-  restart_mosquitto: "curl http://127.0.0.1:8126/container/mosquitto/restart"
-  restart_nodered: "curl http://127.0.0.1:8126/container/node-red/restart"
-  restart_plex: "curl http://127.0.0.1:8126/container/plex/restart"
-
-
-##########################################################
 ## Themes
 ##########################################################
 
@@ -138,6 +122,7 @@ history:
 
       
 recorder:
+#  db_url: !secret recorder_db
   include:
     domains:
       - light
@@ -157,6 +142,29 @@ recorder:
       - sensor.date
       - sensor.custom_card_tracker
   purge_interval: 0
+
+influxdb:
+  database: hass_db
+  username: !secret influxdb_username
+  password: !secret influxdb_password
+  include:
+    domains:
+      - light
+      - media_player
+      - person
+      - sensor
+      - binary_sensor
+      - image_processing  
+  exclude:
+    entities:
+      - sensor.yr_symbol
+      - sun.sun
+      - sensor.zigbee2mqtt_bridge_state
+      - sensor.time
+      - sensor.sunrise
+      - sensor.sunset
+      - sensor.date
+      - sensor.custom_card_tracker
 
 
 ##########################################################
