@@ -1,0 +1,28 @@
+##########################################################
+## Broadlink IR Control
+##########################################################
+
+  - platform: broadlink
+    host: !secret broadlink1_host 
+    mac: !secret broadlink1_mac
+    timeout: 15
+    type: rm_mini
+    switches:
+      candles:
+        friendly_name: "Candles"
+        command_on: "JgBYAAABLJQTEhMSFBISOBMSEhQRExQSETkTOBI4EhMSOBI4FBISOBITEhQRExQSERQSExQSEhMSOBM3FDcSOBI4EzgTNxI4FAAFSAABKkwSAAxiAAEsShMADQU=="
+        command_off: "JgBgAAABLJQUERMTERQTNxITFBIUERIUEzYSORQ2FBEVNRU1ExQTNhITFTUTExQSFBERFBQSExESORQREjgVNRU1EzgVNRU1EwAFSQABK0sUAAxgAAEsSRQADGAAAS1IFQANBQAAAAAAAAAA=="
+      led_lights:  
+        friendly_name: "Cabinet Lights"
+        command_on: "JgBYAAABKZEUEhQRFBEVERQRFBEVERQ2FDYVNRU2FDYUNhQ2FTQWERQRFREUNhQ2FDYVERQRFBIUNhQ2FBEVERQRFDYVNhQ2FAAFIAABKkgVAAxiAAEpSRQADQU="
+        command_off:  "JgBYAAABKZEVERQRFBIUERQRFREUERQ2FTYUNhQ2FDYVNRU2FDYUERU2FBEUNhQ2FTYUERQSFBEUERQ2FREUERURFDYUNhQ2FQAFIAABKUkUAAxiAAEqSBQADQU="
+      led_brightness:  
+        friendly_name: "Cabinet Lighting Brightness"
+        command_on: "JgBQAAABKpAVERQRFREUERQSFBEUERU2FDYUNhQ2FTUVNhQ2FDYUEhQRFDYUEhQRFBEVERQRFBIUNhQRFDYVNhQ2FDYUNhQ2FQAFIAABKkgVAA0FAAAAAAAAAAA=="
+        command_off:  "JgBYAAABKpEVEBURFBEUERURFBEVERQ2FDYUNhU1FTYUNhQ2FDYVERQ2FDYUERURFBEVERQRFBIUERQRFTYUNhQ2FDYUNhU2FAAFIAABKkgUAAxiAAEqSBUADQU="
+
+  - platform: broadlink
+    host: !secret broadlink1_host
+    mac: !secret broadlink1_mac 
+    timeout: 15
+    type: rm_mini
