@@ -34,4 +34,10 @@
     name: 'Global'
     initial: off
     icon: mdi:home-automation
+  
+  entertainment:
+    name: 'Entertainment'
+    initial: off
+    icon: mdi:television
+
 

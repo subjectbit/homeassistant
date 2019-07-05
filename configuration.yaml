@@ -202,14 +202,12 @@ tts:
 
 
 ##########################################################
-## Custom Updater
+## Home Assistant Custom Store (HACS)
 ##########################################################
 
 
-custom_updater:
-  track:
-    - components
-    - cards
+hacs:
+  token: !secret hacs_token
 
 
 ##########################################################
@@ -228,7 +226,7 @@ ffmpeg:
 
 
 logger:
-  default: info
+  default: error
 
 
 ##########################################################
