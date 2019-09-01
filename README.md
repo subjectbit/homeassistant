@@ -15,7 +15,7 @@
 <details>
 <summary>
   <b>Sensors</b></summary>
-  <p>I like using Xiaomi sensors as they're cheap, reliable, and portable. This is especially relevant to my use case as I bought the majority of the sensors used in my setup as a renter. I've since graduated to home ownership and have mounted the sensors in key areas to detect motion, climate, and door/window settings. All the Xioami sensors and switches are controlled via the deCONZ container with a Conbee 2 coordinator. I originally used the zigbee2mqtt container with the CC2531 but experienced constant stability issues. Ever since getting past the initial setup with deCONZ, it's been rock solid.</p>
+  <p>I like using Xiaomi sensors as they're cheap, reliable, and portable. This is especially relevant to my use case as I bought the majority of the sensors used in my setup as a renter. I've since graduated to home ownership and have mounted the sensors in key areas to detect motion, climate, and door/window settings. All the Xiaomi sensors and switches are controlled via the deCONZ container with a Conbee 2 coordinator. I originally used the zigbee2mqtt container with the CC2531 but experienced constant stability issues. Ever since getting past the initial setup with deCONZ, it's been rock solid.</p>
   <ul>
   <li><a href="https://www.aliexpress.com/item/New-Original-Xiaomi-Mijia-Human-Body-Sensor-Infrared-Smart-Home-Detector-Motion-Sensor-Safe-Moistureproof-15ms/32858852215.html?spm=2114.search0104.3.19.111f316b2zfoj2&ws_ab_test=searchweb0_0,searchweb201602_1_10065_10130_10068_10890_10547_319_10546_317_10548_10545_10696_453_10084_454_10083_10618_10307_537_536_10902_10059_10884_10887_321_322_10103,searchweb201603_57,ppcSwitch_0&algo_expid=cfc297f2-d6a6-4952-a632-a63ac3f66fdd-2&algo_pvid=cfc297f2-d6a6-4952-a632-a63ac3f66fdd">Xiaomi Mijia Human Body Sensor</a></li>
   <li><a href="https://www.aliexpress.com/item/2019-Xiaomi-Mi-Smart-Temperature-and-Humidity-Sensor-Mini-Intelligent-Sensor-Put-the-baby-Home-office/32986664949.html?spm=2114.search0104.3.32.17e2205013KSAz&ws_ab_test=searchweb0_0,searchweb201602_1_10065_10130_10068_10890_10547_319_10546_317_10548_10545_10696_453_10084_454_10083_10618_10307_537_536_10902_10059_10884_10887_321_322_10103,searchweb201603_57,ppcSwitch_0&algo_expid=246f6dd6-c260-492f-82da-5b9358ca0864-7&algo_pvid=246f6dd6-c260-492f-82da-5b9358ca0864">Xiaomi Mi Smart Temperature & Humidty</a></li>
@@ -26,7 +26,7 @@
 <details>
 <summary>
   <b>Lighting</b></summary>
-  <p>After experiementing with wi-fi bulbs, I decided to leverage Zigbee for all lighting. In my current setup, I have 50+ bulbs in action with the majority coming from the Philips Hues lineup. I've never used the official hub as I prefer to use a more generizied hub to reduce vendor dependiecies. To that end, I've had great success using the deCONZ software with the Conbee II coordinator. Setting up lights is simple and performance is rock solid.</p>
+  <p>After experimenting with wi-fi bulbs, I decided to leverage Zigbee for all lighting. In my current setup, I have 50+ bulbs in action with the majority coming from the Philips Hues lineup. I've never used the official hub as I prefer to use a more genericized hub to reduce vendor dependencies. To that end, I've had great success using the deCONZ software with the Conbee II coordinator. Setting up lights is simple and performance is rock solid.</p>
   <ul>
   <li><a href="https://www2.meethue.com/en-us">Philips Hues</a></li>
   <li><a href="https://www.ikea.com/us/en/catalog/categories/departments/living_room/36812/">TRÅDFRI</a></li>
@@ -52,27 +52,27 @@
 # UI Screenshots
 
 ## Overview
-<p>The overview page gives a quick snapshot of activity in the hosue. Some elements such as media players and any open doors or windows are dynamic and only appear while in certain states (e.g. an open window). I've shifted my approach to the UI in general by trying to use it less in favor of building intuitive contexts and automations. </p>
+<p>The overview page gives a quick snapshot of activity in the house. Some elements such as media players and any open doors or windows are dynamic and only appear while in certain states (e.g. an open window). I've shifted my approach to the UI in general by trying to use it less in favor of building intuitive contexts and automations. </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/overview_ui.png">
 </p>
 
 ## Basement
-<p>Rather than taking a room by room view approach, I've paried down each view to represent the floor (basement, first, second). </p>
+<p>Rather than taking a room by room view approach, I've pared down each view to represent the floor (basement, first, second). </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/basement.png">
 </p>
 
 ## First Floor
 
-<p>Each column represents diferent spaces. My home has a very open first floor layout so blending the different lighting and motion contexts is important.</p>
+<p>Each column represents different spaces. My home has a very open first floor layout so blending the different lighting and motion contexts is important.</p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/first_floor.png">
 </p>
 
 ## Second Floor
 
-<p>I've tried to use a consistant hirearchy in each view by displaying motion and lights, then media players, then any additional sensors such as climate or window/door status.</p>
+<p>I've tried to use a consistent hierarchy in each view by displaying motion and lights, then media players, then any additional sensors such as climate or window/door status.</p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/second_floor.png">
 </p>
