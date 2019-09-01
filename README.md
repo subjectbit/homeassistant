@@ -24,6 +24,15 @@
   </ul>
 </details>
 <details>
+<summary>
+  <b>Lighting</b></summary>
+  <p>After experiementing with wi-fi bulbs, I decided to leverage Zigbee for all lighting. In my current setup, I have 50+ bulbs in action with the majority coming from the Philips Hues lineup. I've never used the official hub as I prefer to use a more generizied hub to reduce vendor dependiecies. To that end, I've had great success using the deCONZ software with the Conbee II coordinator. Setting up lights is simple and performance is rock solid.</p>
+  <ul>
+  <li><a href="https://www2.meethue.com/en-us">Philips Hues</a></li>
+  <li><a href="https://www.ikea.com/us/en/catalog/categories/departments/living_room/36812/">TRÅDFRI</a></li>
+  </ul>
+</details>
+<details>
    <summary>
   <b>Software</b>  </summary>
     <p><strong>OS</strong></p><p><a href="http://releases.ubuntu.com/18.04/">Ubuntu 18.04 LTS</a></p>
