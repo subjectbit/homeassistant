@@ -51,3 +51,8 @@
     alias: 'Restart Zigbee2mqtt'
     sequence:
       - service: shell_command.restart_zigbee2mqtt
+
+  start_xbox:
+    alias: 'Start XBOX'
+    sequence:
+      - service: shell_command.start_xbox

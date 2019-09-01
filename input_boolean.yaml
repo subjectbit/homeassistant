@@ -1,17 +1,7 @@
-# Input boolean for enabling/disabling joining
+# Input booleans for disabling automation
 
   common_area:
     name: 'Common Area'
-    initial: on
-    icon: mdi:home-automation
-
-  master_bedroom:
-    name: 'Master Bedroom'
-    initial: on
-    icon: mdi:home-automation
-
-  second_bedroom:
-    name: 'Second Bedroom'
     initial: on
     icon: mdi:home-automation
 
@@ -22,6 +12,26 @@
 
   office:
     name: 'Office'
+    initial: on
+    icon: mdi:home-automation
+
+  loft:
+    name: 'Loft'
+    initial: on
+    icon: mdi:home-automation
+
+  laundry:
+    name: 'Laundry'
+    initial: on
+    icon: mdi:home-automation
+
+  master_bedroom:
+    name: 'Master Bedroom'
+    initial: on
+    icon: mdi:home-automation
+
+  second_bedroom:
+    name: 'Second Bedroom'
     initial: on
     icon: mdi:home-automation
 
@@ -39,5 +49,8 @@
     name: 'Entertainment'
     initial: off
     icon: mdi:television
+
+    
+
 
 

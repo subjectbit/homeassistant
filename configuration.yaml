@@ -1,17 +1,3 @@
-homeassistant:
-  name: Home Control
-  latitude: !secret lat
-  longitude: !secret long
-  elevation: !secret elevation
-  unit_system: imperial
-  time_zone:  !secret time_zone
-  customize: !include customize.yaml
-  whitelist_external_dirs:
-    - /tmp
-    - /config
-  auth_providers:
-    - type: homeassistant
-
 ##########################################################
 ## Remote Access & IP Ban
 ##########################################################
@@ -39,33 +25,6 @@ frontend:
 
 
 cloud:
-  google_actions:
-    filter:
-      include_domains:
-        - light
-        - media_player
-        - input_boolean
-      include_entities: 
-        - switch.candle
-
-
-##########################################################
-## MQTT & DB's
-##########################################################
-
-
-mqtt:
-  broker: !secret mqtt_broker
-  client_id: homeassistant
-  username: !secret mqtt_username
-  password: !secret mqtt_password  
-  discovery: true
-  birth_message:
-    topic: 'hass/status'
-    payload: 'online'
-  will_message:
-    topic: 'hass/status'
-    payload: 'offline'
 
 
 ##########################################################
@@ -78,21 +37,8 @@ device_tracker:
     hosts: 
       - !secret nmap_host1
       - !secret nmap_host2
-      - !secret nmap_host3
     exclude:
-     - 192.168.86.200
-    home_interval: 2
-
-
-##########################################################
-## Xiaomi
-##########################################################
-
-
-xiaomi_aqara:
-  discovery_retry: 10
-  gateways:
-    - key: !secret xiaomi_key
+     - !secret nmap_host_exclude 
 
 
 ##########################################################
@@ -135,7 +81,6 @@ recorder:
     entities:
       - sensor.yr_symbol
       - sun.sun
-      - sensor.zigbee2mqtt_bridge_state
       - sensor.time
       - sensor.sunrise
       - sensor.sunset
@@ -159,20 +104,11 @@ influxdb:
     entities:
       - sensor.yr_symbol
       - sun.sun
-      - sensor.zigbee2mqtt_bridge_state
       - sensor.time
       - sensor.sunrise
       - sensor.sunset
       - sensor.date
       - sensor.custom_card_tracker
-
-
-##########################################################
-## TP-Link
-##########################################################
-
-
-tplink:
 
 
 ##########################################################
@@ -238,33 +174,6 @@ weather:
   - platform: darksky
     api_key: !secret darksky_api
     mode: daily
-
-
-##########################################################
-## Zigbee Home Automation
-##########################################################
-
-# re-enable when ZHA is ready for prime time
-
-#zha:
-#  usb_path: /dev/ttyUSB1
-#  database_path: /config/zigbee.db
-
-
-##########################################################
-## Zigbee Network Map
-##########################################################
- 
-
-webhook:
-
-zigbee2mqtt_networkmap:
- 
-panel_iframe:
-  networkmap:
-    title: 'Zigbee Map'
-    url: '/local/zigbee2mqtt_networkmap/map.html'
-    icon: 'mdi:graphql'
 
 
 ##########################################################

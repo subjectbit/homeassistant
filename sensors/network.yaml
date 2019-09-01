@@ -1,10 +1,5 @@
 ##########################################################
-## Google Wifi
+## Google Wi-Fi
 ##########################################################
 
 - platform: google_wifi
-  name: 'Wifi'
-  monitored_conditions:
-  - status
-  - uptime
-  - last_restart

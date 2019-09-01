@@ -8,11 +8,12 @@
 
 
 ##########################################################
-## Zigbee2mqtt Bridge
+## Mi Flora
 ##########################################################
 
 
-- platform: mqtt
-  name: Zigbee2mqtt Bridge state
-  state_topic: "zigbee2mqtt/bridge/state"
-  icon: mdi:zigbee
+- platform: miflora
+  mac: !secret plant_mac
+  name: Office Flower
+  force_update: true
+  median: 3

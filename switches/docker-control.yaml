@@ -25,22 +25,8 @@
     is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
 
   - platform: rest
-    resource: http://127.0.0.1:8126/container/mosquitto
-    name: Mosquitto
-    body_on: '{"state": "start"}'
-    body_off: '{"state": "stop"}'
-    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
-
-  - platform: rest
     resource: http://127.0.0.1:8126/container/node-red
     name: Node-Red
-    body_on: '{"state": "start"}'
-    body_off: '{"state": "stop"}'
-    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
-
-  - platform: rest
-    resource: http://127.0.0.1:8126/container/glances
-    name: Glances
     body_on: '{"state": "start"}'
     body_off: '{"state": "stop"}'
     is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
@@ -52,9 +38,10 @@
     body_off: '{"state": "stop"}'
     is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
 
+
   - platform: rest
-    resource: http://127.0.0.1:8126/container/zigbee2mqtt
-    name: Zigbee2mqtt
+    resource: http://127.0.0.1:8126/container/deconz
+    name: Deconz
     body_on: '{"state": "start"}'
     body_off: '{"state": "stop"}'
     is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
@@ -71,23 +58,12 @@
         command_on: "curl http://127.0.0.1:8126/container/portainer/restart"
         friendly_name: Portainer
 
-  - platform: command_line
-    switches:
-      zigbee2mqtt_restart:
-        command_on: "curl http://127.0.0.1:8126/container/zigbee2mqtt/restart"
-        friendly_name: Zigbee2MQTT
 
   - platform: command_line
     switches:
       home_assistant_restart:
         command_on: "curl http://127.0.0.1:8126/container/home-assistant/restart"
         friendly_name: Home Assistant
-
-  - platform: command_line
-    switches:
-      mosquitto_restart:
-        command_on: "curl http://127.0.0.1:8126/container/mosquitto/restart"
-        friendly_name: Mosquitto
 
   - platform: command_line
     switches:
@@ -118,3 +94,9 @@
       caddy_restart:
         command_on: "curl http://127.0.0.1:8126/container/caddy/restart"
         friendly_name: Caddy
+
+  - platform: command_line
+    switches:
+      deconz_restart:
+        command_on: "curl http://127.0.0.1:8126/container/deconz/restart"
+        friendly_name: Deconz

@@ -1,5 +1,5 @@
 - platform: vizio
-  host: 192.168.86.25
+  host: !secret vizio_host
   access_token: !secret vizio_token
 
 - platform: plex

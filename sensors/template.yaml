@@ -154,14 +154,6 @@
     end: '{{ now() }}'    
 
   - platform: history_stats
-    name: 'Kylee time home this month'
-    entity_id: person.kylee
-    state: 'home'
-    type: time
-    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
-    end: '{{ now() }}'  
-
-  - platform: history_stats
     name: TV Today
     entity_id: media_player.vizio_smartcast
     state: 'on'
@@ -181,10 +173,6 @@
 ##########################################################
 ## DB Size & Version
 ##########################################################
-
-  - platform: filesize
-    file_paths:
-      - '/config/home-assistant_v2.db'
 
   - platform: version
     name: Installed Version

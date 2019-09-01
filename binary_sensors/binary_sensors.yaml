@@ -9,7 +9,6 @@
         device_class: presence
         icon_template: mdi:human-male-female
 
-
   - platform: template
     sensors:
       anyone_home:
@@ -20,3 +19,49 @@
              is_state('person.kylee', 'home') }}
         device_class: presence
         icon_template: mdi:human-male-girl
+
+  - platform: template
+    sensors:
+      office_motion:
+        friendly_name: "Office Motion"
+        value_template: >
+          {{ is_state('binary_sensor.office_motion_1', 'on') or
+             is_state('binary_sensor.office_motion_2', 'on') }}
+        device_class: motion
+
+  - platform: template
+    sensors:
+      kitchen_motion:
+        friendly_name: "Kitchen Motion"
+        value_template: >
+          {{ is_state('binary_sensor.kitchen_motion1', 'on') or
+             is_state('binary_sensor.kitchen_motion2', 'on') }}
+        device_class: motion
+
+  - platform: template
+    sensors:
+      common_area_motion:
+        friendly_name: "Common Area Motion"
+        value_template: >
+          {{ is_state('binary_sensor.common_area_motion1', 'on') or
+             is_state('binary_sensor.common_area_motion2', 'on') }}
+        device_class: motion
+
+  - platform: template
+    sensors:
+      loft_motion:
+        friendly_name: "Loft Motion"
+        value_template: >
+          {{ is_state('binary_sensor.loft_landing_motion', 'on') or
+             is_state('binary_sensor.loft_motion2', 'on') }}
+        device_class: motion
+
+  - platform: template
+    sensors:
+      basement_motion:
+        friendly_name: "Basement Motion"
+        value_template: >
+          {{ is_state('binary_sensor.basement_motion1', 'on') or
+             is_state('binary_sensor.basement_motion2', 'on') or
+             is_state('binary_sensor.basement_motion3', 'on') }}
+        device_class: motion
