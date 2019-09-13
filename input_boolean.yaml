@@ -35,6 +35,11 @@
     initial: on
     icon: mdi:home-automation
 
+  third_bedroom:
+    name: 'Third Bedroom'
+    initial: on
+    icon: mdi:home-automation
+
   basement:
     name: 'Basement'
     initial: on

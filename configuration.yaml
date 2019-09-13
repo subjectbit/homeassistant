@@ -25,6 +25,37 @@ frontend:
 
 
 cloud:
+  google_actions:
+    filter:
+      include_entities:
+        - light.basement_5
+        - light.front_entry
+        - light.office
+        - light.half_bath
+        - light.common_area
+        - light.dining
+        - light.kitchen
+        - light.mudroom
+        - light.loft
+        - light.laundry
+        - light.second_bedroom
+        - light.third_bedroom
+        - light.master_closet
+        - light.maseter_bath
+        - switch.candles
+        - switch.cabinet_lights
+        - switch.basement_fan
+        - media_player.common_area_speaker
+        - media_player.basement_speaker
+        - media_player.laundry_speaker
+        - media_player.kitchen_display
+        - media_player.master_bedroom_tv
+        - media_player.office_speaker
+        - media_player.loft_display
+        - media_player.second_bedroom_speaker
+        - media_player.vizio_smartcast
+        - input_boolean.entertainment
+        - input_boolean.global
 
 
 ##########################################################
@@ -122,6 +153,7 @@ telegram_bot:
     allowed_chat_ids:
       - !secret chat_id
 
+
 notify:
   - name: NOTIFIER_NAME
     platform: telegram
@@ -157,13 +189,21 @@ ffmpeg:
 
 
 ##########################################################
-## logging
+## Logging
 ##########################################################
 
 
 logger:
-  default: error
+  default: info
 
+
+##########################################################
+## Discovery
+##########################################################
+
+discovery:
+  ignore:
+    - homekit
 
 ##########################################################
 ## Weather

@@ -7,10 +7,10 @@
     sequence:
       - service: shell_command.restart_hass
 
-  restart_watchtower:
-    alias: 'Restart Watchtower'
+  restart_ouroboros:
+    alias: 'Restart Ouroboros'
     sequence:
-      - service: shell_command.restart_watchtower
+      - service: shell_command.restart_ouroboros
 
   restart_portainer:
     alias: 'Restart Portainer'
@@ -32,11 +32,6 @@
     sequence:
       - service: shell_command.restart_caddy
 
-  restart_mosquitto:
-    alias: 'Restart Mosquitto'
-    sequence:
-      - service: shell_command.restart_mosquitto
-
   restart_nodered:
     alias: 'Restart Node-Red'
     sequence:
@@ -47,10 +42,10 @@
     sequence:
       - service: shell_command.restart_plex
   
-  restart_zigbee2mqtt:
-    alias: 'Restart Zigbee2mqtt'
+  restart_deconz:
+    alias: 'Restart deCONZ'
     sequence:
-      - service: shell_command.restart_zigbee2mqtt
+      - service: shell_command.restart_deconz
 
   start_xbox:
     alias: 'Start XBOX'
