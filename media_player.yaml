@@ -1,5 +1,3 @@
 - platform: vizio
   host: !secret vizio_host
   access_token: !secret vizio_token
-
-- platform: plex

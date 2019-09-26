@@ -1,5 +1,5 @@
 - platform: group
-  name: Basement
+  name: Basement Group
   entities:
     - light.basement_light_1
     - light.basement_light_2

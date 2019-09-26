@@ -1,0 +1,271 @@
+  - platform: history_stats
+    name: Basement Occupancy - All Time
+    entity_id: binary_sensor.basement_motion
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Basement Occupancy - Monthly
+    entity_id: binary_sensor.basement_motion
+    state: 'on'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Front Entry Occupancy - All Time
+    entity_id: binary_sensor.front_entry_motion
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Front Entry Occupancy - Monthly
+    entity_id: binary_sensor.front_entry_motion
+    state: 'on'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Office Occupancy - All Time
+    entity_id: binary_sensor.office_motion
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Office Occupancy - Monthly
+    entity_id: binary_sensor.office_motion
+    state: 'on'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Half Bath Occupancy - All Time
+    entity_id: binary_sensor.half_bath_motion
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Half Bath Occupancy - Monthly
+    entity_id: binary_sensor.half_bath_motion
+    state: 'on'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Common Area Occupancy - All Time
+    entity_id: binary_sensor.common_area_motion
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+    
+  - platform: history_stats
+    name: Common Area Occupancy - Monthly
+    entity_id: binary_sensor.common_area_motion
+    state: 'on'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Dining Occupancy - All Time
+    entity_id: binary_sensor.dining_motion
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Dining Occupancy - Monthly
+    entity_id: binary_sensor.dining_motion
+    state: 'on'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+    
+  - platform: history_stats
+    name: Kitchen Occupancy - All Time 
+    entity_id: binary_sensor.kitchen_motion
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Kitchen Occupancy - Monthly
+    entity_id: binary_sensor.kitchen_motion
+    state: 'on'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Mudroom Occupancy - All Time
+    entity_id: binary_sensor.mudroom_motion
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Mudroom Occupancy - Monthly
+    entity_id: binary_sensor.mudroom_motion
+    state: 'on'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Loft Occupancy - All Time
+    entity_id: binary_sensor.loft_motion
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Loft Occupancy- Monthly
+    entity_id: binary_sensor.loft_motion
+    state: 'on'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Hallway Occupancy - All Time
+    entity_id: binary_sensor.hallway_motion
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Hallway Occupancy - Monthly
+    entity_id: binary_sensor.hallway_motion
+    state: 'on'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Laundry Occupancy - All Time
+    entity_id: binary_sensor.laundry_motion
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Laundry Occupancy - Monthly
+    entity_id: binary_sensor.laundry_motion
+    state: 'on'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Second Bedroom Occupancy - All Time
+    entity_id: binary_sensor.second_bedroom_motion
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Second Bedroom Occupancy - Monthly
+    entity_id: binary_sensor.second_bedroom_motion
+    state: 'on'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Second Bath Occupancy - All Time
+    entity_id: binary_sensor.second_bath_motion
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Second Bath Occupancy - Monthly
+    entity_id: binary_sensor.second_bath_motion
+    state: 'on'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Third Bedroom Occupancy - All Time
+    entity_id: binary_sensor.third_bedroom_motion
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Third Bedroom Occupancy - Monthly
+    entity_id: binary_sensor.third_bedroom_motion
+    state: 'on'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Master Bath Occupancy - All Time
+    entity_id: binary_sensor.master_bath_motion
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Master Bath Occupancy - Monthly
+    entity_id: binary_sensor.master_bath_motion
+    state: 'on'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Master Closet Occupancy - All Time
+    entity_id: binary_sensor.master_closet_motion
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Master Closet Occupancy - Monthly
+    entity_id: binary_sensor.master_closet_motion
+    state: 'on'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Master Bedroom Occupancy - All Time
+    entity_id: binary_sensor.master_bedroom_motion
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Master Bedroom Occupancy - Monthly
+    entity_id: binary_sensor.master_bedroom_motion
+    state: 'on'
+    type: time
+    start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'

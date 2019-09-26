@@ -40,6 +40,11 @@
     initial: on
     icon: mdi:home-automation
 
+  second_bath:
+    name: 'Second Bath'
+    initial: on
+    icon: mdi:home-automation
+
   basement:
     name: 'Basement'
     initial: on

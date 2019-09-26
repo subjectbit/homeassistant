@@ -1,0 +1,136 @@
+  - platform: history_stats
+    name: Basement Lighting
+    entity_id: light.basement_group
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Front Entry Lighting
+    entity_id: light.front_entry
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Office Lighting
+    entity_id: light.office
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Half Bath Lighting
+    entity_id: light.half_bath
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Common Area Lighting
+    entity_id: light.common_area
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Dining Lighting
+    entity_id: light.dining
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+    
+  - platform: history_stats
+    name: Kitchen Lighting
+    entity_id: light.kitchen
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Mudroom Lighting
+    entity_id: light.mudroom
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Loft Lighting
+    entity_id: light.loft
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Hallway Lighting
+    entity_id: light.hallway
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Laundry Lighting
+    entity_id: light.laundry_room
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Second Bedroom Lighting
+    entity_id: light.second_bedroom
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Second Bath Lighting
+    entity_id: light.second_bath
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Third Bedroom Lighting
+    entity_id: light.third_bedroom
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Master Bath Lighting
+    entity_id: light.master_bath
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Master Closet Lighting
+    entity_id: light.master_closet
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: Master Bedroom Lighting
+    entity_id: light.master_bedroom_3
+    state: 'on'
+    type: time
+    start: '{{ 0 }}'
+    end: '{{ now() }}'
+

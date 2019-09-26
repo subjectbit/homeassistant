@@ -19,44 +19,6 @@ frontend:
   javascript_version: latest
 
 
-##########################################################
-## Cloud
-##########################################################
-
-
-cloud:
-  google_actions:
-    filter:
-      include_entities:
-        - light.basement_5
-        - light.front_entry
-        - light.office
-        - light.half_bath
-        - light.common_area
-        - light.dining
-        - light.kitchen
-        - light.mudroom
-        - light.loft
-        - light.laundry
-        - light.second_bedroom
-        - light.third_bedroom
-        - light.master_closet
-        - light.maseter_bath
-        - switch.candles
-        - switch.cabinet_lights
-        - switch.basement_fan
-        - media_player.common_area_speaker
-        - media_player.basement_speaker
-        - media_player.laundry_speaker
-        - media_player.kitchen_display
-        - media_player.master_bedroom_tv
-        - media_player.office_speaker
-        - media_player.loft_display
-        - media_player.second_bedroom_speaker
-        - media_player.vizio_smartcast
-        - input_boolean.entertainment
-        - input_boolean.global
-
 
 ##########################################################
 ## Device Tracking
@@ -90,7 +52,6 @@ history:
     entities:
       - sensor.yr_symbol
       - sun.sun
-      - sensor.zigbee2mqtt_bridge_state
       - sensor.time
       - sensor.sunrise
       - sensor.sunset
@@ -99,7 +60,6 @@ history:
 
       
 recorder:
-#  db_url: !secret recorder_db
   include:
     domains:
       - light
@@ -215,6 +175,12 @@ weather:
     api_key: !secret darksky_api
     mode: daily
 
+plex:
+  token: !secret plex_token
+  ssl: true
+  media_player:
+    use_episode_art: true
+    show_all_controls: true
 
 ##########################################################
 ## Include YAML's
