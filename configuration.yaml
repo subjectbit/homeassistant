@@ -1,3 +1,12 @@
+homeassistant:
+  latitude: 40.2160534
+  longitude: -83.3608818
+  elevation: 430
+  unit_system: imperial
+  time_zone: America/New_York
+  name: Weaver Ridge
+
+
 ##########################################################
 ## Remote Access & IP Ban
 ##########################################################
@@ -17,7 +26,6 @@ http:
 frontend:
   themes: !include themes.yaml
   javascript_version: latest
-
 
 
 ##########################################################
@@ -175,12 +183,19 @@ weather:
     api_key: !secret darksky_api
     mode: daily
 
+
+##########################################################
+## Plex
+##########################################################
+
+
 plex:
   token: !secret plex_token
   ssl: true
   media_player:
     use_episode_art: true
     show_all_controls: true
+
 
 ##########################################################
 ## Include YAML's

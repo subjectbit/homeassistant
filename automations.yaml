@@ -18,16 +18,3 @@
   - data:
       entity_id: all
     service: automation.turn_on
-- id: '1566509427559'
-  alias: Disable Office Control
-  trigger:
-  - event_data:
-      event: 1004
-      id: office_control
-    event_type: deconz_event
-    platform: event
-  condition: []
-  action:
-  - data:
-      entity_id: input_boolean.office
-    service: input_boolean.turn_on

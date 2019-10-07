@@ -6,10 +6,13 @@
   - platform: tensorflow
     scan_interval: 604800
     source:
-      - entity_id: camera.mudroom_camera  
-      - entity_id: camera.kitchen_camera  
-      - entity_id: camera.loft_camera  
-      - entity_id: camera.office_camera  
+      - entity_id: camera.dining
+      - entity_id: camera.garage_entrance  
+      - entity_id: camera.loft
+      - entity_id: camera.office_camera
+      - entity_id: camera.basement
+      - entity_id: camera.common_area
+      
     file_out:
       - "/config/www/tensorflow/{{ camera_entity.split('.')[1] }}_latest.jpg"
       - "/config/www/tensorflow/{{ camera_entity.split('.')[1] }}_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
@@ -26,8 +29,13 @@
 
 
   - platform: facebox
-    scan_interval: 604800
-    ip_address: localhost
+    scan_interval: 604800  
+    ip_address: !secret facebox_host
     port: !secret facebox_port
     source:
-      - entity_id: camera.saved_image
+      - entity_id: camera.dining
+      - entity_id: camera.garage_entrance  
+      - entity_id: camera.loft
+      - entity_id: camera.office_camera
+      - entity_id: camera.basement
+      - entity_id: camera.common_area

@@ -1,6 +1,7 @@
 ##########################################################
-## Templates
+## Weather Sensors
 ##########################################################
+
 
   - platform: template
     sensors:
@@ -24,8 +25,19 @@
       
 
 ##########################################################
+## Facial Recognition Sensors
+##########################################################
+
+
+      facebox_detection:
+        friendly_name: "Josiah Face Detection"
+        value_template: '{% if state_attr("image_processing.facebox_office_camera","faces") %}{{ state_attr("image_processing.facebox_office_camera","faces")[0]["josiah"] }}{% else %}unknown{% endif %}'
+
+
+##########################################################
 ## Sensor Counts
 ##########################################################
+
 
       sensor_count:
         entity_id: []
@@ -131,6 +143,19 @@
             {%- endfor -%}
           {%- endfor -%}
 
+
+      camera_count:
+        entity_id: []
+        friendly_name: 'Number of Cameras'
+        value_template: >
+          {%- set domains = ['camera'] -%}
+          {%- for domain in domains -%}
+            {%- for item in states[domain] -%}
+              {% if loop.first %}
+                {{loop.length}}
+              {% endif %}
+            {%- endfor -%}
+          {%- endfor -%}
 
 
 ##########################################################
