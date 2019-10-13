@@ -18,3 +18,13 @@
   - data:
       entity_id: all
     service: automation.turn_on
+- id: '1570716027596'
+  alias: Teach Facebox
+  trigger:
+  - entity_id: switch.facebox
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - service: shell_command.teach_facebox

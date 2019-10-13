@@ -1,0 +1,77 @@
+##########################################################
+## HA Docker Control
+##########################################################
+
+
+  - platform: rest
+    resource: http://127.0.0.1:8126/container/ouroboros
+    name: Ouroboros
+    body_on: '{"state": "start"}'
+    body_off: '{"state": "stop"}'
+    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+
+  - platform: rest
+    resource: http://127.0.0.1:8126/container/portainer
+    name: Portainer
+    body_on: '{"state": "start"}'
+    body_off: '{"state": "stop"}'
+    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+
+  - platform: rest
+    resource: http://127.0.0.1:8126/container/caddy
+    name: Caddy
+    body_on: '{"state": "start"}'
+    body_off: '{"state": "stop"}'
+    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+
+  - platform: rest
+    resource: http://127.0.0.1:8126/container/mosquitto
+    name: Mosquitto
+    body_on: '{"state": "start"}'
+    body_off: '{"state": "stop"}'
+    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+
+  - platform: rest
+    resource: http://127.0.0.1:8126/container/node-red
+    name: Node-Red
+    body_on: '{"state": "start"}'
+    body_off: '{"state": "stop"}'
+    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+
+  - platform: rest
+    resource: http://127.0.0.1:8126/container/glances
+    name: Glances
+    body_on: '{"state": "start"}'
+    body_off: '{"state": "stop"}'
+    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+
+  - platform: rest
+    resource: http://127.0.0.1:8126/container/organizr
+    name: Organizr
+    body_on: '{"state": "start"}'
+    body_off: '{"state": "stop"}'
+    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+
+  - platform: rest
+    resource: http://127.0.0.1:8126/container/zigbee2mqtt
+    name: Zigbee2mqtt
+    body_on: '{"state": "start"}'
+    body_off: '{"state": "stop"}'
+    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+
+
+##########################################################
+## Broadlink IR Control
+##########################################################
+
+
+  - platform: broadlink
+    host: 192.168.86.30
+    mac: '34:ea:34:40:8b:33'
+    timeout: 15
+    type: rm_mini
+    switches:
+      candles:
+        friendly_name: "Candles"
+        command_on: "JgBYAAABLJQTEhMSFBISOBMSEhQRExQSETkTOBI4EhMSOBI4FBISOBITEhQRExQSERQSExQSEhMSOBM3FDcSOBI4EzgTNxI4FAAFSAABKkwSAAxiAAEsShMADQU=="
+        command_off: "JgBgAAABLJQUERMTERQTNxITFBIUERIUEzYSORQ2FBEVNRU1ExQTNhITFTUTExQSFBERFBQSExESORQREjgVNRU1EzgVNRU1EwAFSQABK0sUAAxgAAEsSRQADGAAAS1IFQANBQAAAAAAAAAA=="

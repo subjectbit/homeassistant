@@ -46,6 +46,13 @@
     body_off: '{"state": "stop"}'
     is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
 
+  - platform: rest
+    resource: http://127.0.0.1:8126/container/facebox
+    name: Facebox
+    body_on: '{"state": "start"}'
+    body_off: '{"state": "stop"}'
+    is_on_template: '{{ value_json is not none and value_json.state == "running" }}'
+
 
 ##########################################################
 ## Container Restart Switches
