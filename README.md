@@ -77,6 +77,25 @@
   <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/second_floor.png">
 </p>
 
+# Lights
+<p>This page provides a visual overview to voice commands and displays all lighting groups in the house.</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/lights_ui.png">
+</p>
+
+## Media
+
+<p>As the number of media devices grew, it became too cluttered on a room-by-room view basis. Now all media devices are clustered on a single view.</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/media_ui.png">
+</p>
+
+## Cameras
+
+<p>Camera feeds around the house. These can also be casted to any of the display enabled media devices using Home Assistant's RTSP feature. All cameras are locally controled with no access to the internet.</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/cameras_ui.png">
+</p>
 
 ## Settings
 
