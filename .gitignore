@@ -38,3 +38,4 @@ _uuid
 .HA_VERSION
 .cloud/
 tensorflow/
+python_scripts/
