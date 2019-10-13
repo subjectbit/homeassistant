@@ -20,6 +20,7 @@ zones.yaml
 plex.conf
 gitupdate.sh
 customize.yaml
+.gitignore
 
 
 ##########################################################
