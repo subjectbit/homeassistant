@@ -5,7 +5,7 @@ homeassistant:
   unit_system: imperial
   time_zone: America/New_York
   name: Weaver Ridge
-
+  
 
 ##########################################################
 ## Remote Access & IP Ban
@@ -162,6 +162,15 @@ tts:
 default_config:
 stream:
 ffmpeg:
+
+
+##########################################################
+## Owntracks
+##########################################################
+
+
+owntracks:
+  max_gps_accuracy: 200
 
 
 ##########################################################

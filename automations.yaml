@@ -1,13 +1,3 @@
-- id: '1552181244155'
-  alias: Set theme on start
-  trigger:
-  - event: start
-    platform: homeassistant
-  condition: []
-  action:
-  - data:
-      name: clear
-    service: frontend.set_theme
 - id: '1552492002557'
   alias: Enable automations whenever HASS starts
   trigger:

@@ -15,6 +15,16 @@
     initial: on
     icon: mdi:home-automation
 
+  mudroom:
+    name: 'Mudroom'
+    initial: on
+    icon: mdi:home-automation
+
+  half_bath:
+    name: 'Half Bath'
+    initial: on
+    icon: mdi:home-automation
+
   loft:
     name: 'Loft'
     initial: on
@@ -27,6 +37,11 @@
 
   master_bedroom:
     name: 'Master Bedroom'
+    initial: on
+    icon: mdi:home-automation
+
+  master_bath:
+    name: 'Master Bath'
     initial: on
     icon: mdi:home-automation
 
@@ -49,6 +64,11 @@
     name: 'Basement'
     initial: on
     icon: mdi:home-automation
+
+  front_entry:
+    name: 'Front Entry'
+    initial: on
+    icon: mdi:home-automation
   
   global:
     name: 'Global'
@@ -65,5 +85,14 @@
     initial: off
     icon: mdi:home-automation
 
+  sync_volume:
+    name: 'Sync Volume'
+    initial: off
+    icon: mdi:volume-source
+
+  space:
+    name: 'Space'
+    initial: off
+    icon: mdi:weather-night
 
 

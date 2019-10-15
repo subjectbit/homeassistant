@@ -90,13 +90,6 @@
   <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/media_ui.png">
 </p>
 
-## Cameras
-
-<p>Camera feeds around the house. These can also be casted to any of the display enabled media devices using Home Assistant's RTSP feature. All cameras are locally controled with no access to the internet.</p>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/cameras_ui.png">
-</p>
-
 ## Settings
 
 <p>For now, I've added some simple views and controls to manage each container and automation status. Eventually, I'll migrate most of this to a Grafana dashboard to help understand long term trends of consumption and use.</p>
