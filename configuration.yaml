@@ -1,6 +1,6 @@
 homeassistant:
-  latitude: 40.2160534
-  longitude: -83.3608818
+  latitude: !secret lat
+  longitude: !secret long
   elevation: 430
   unit_system: imperial
   time_zone: America/New_York
