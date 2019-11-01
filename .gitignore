@@ -21,7 +21,8 @@ plex.conf
 gitupdate.sh
 customize.yaml
 .gitignore
-
+home-assistant_v2.db-shm
+home-assistant_v2.db-wal
 
 ##########################################################
 ## Folders
