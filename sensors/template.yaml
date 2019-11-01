@@ -25,16 +25,6 @@
       
 
 ##########################################################
-## Facial Recognition Sensors
-##########################################################
-
-
-      facebox_detection:
-        friendly_name: "Josiah Face Detection"
-        value_template: '{% if state_attr("image_processing.facebox_office_camera","faces") %}{{ state_attr("image_processing.facebox_office_camera","faces")[0]["josiah"] }}{% else %}unknown{% endif %}'
-
-
-##########################################################
 ## Sensor Counts
 ##########################################################
 
@@ -162,6 +152,7 @@
 ## History Stats
 ##########################################################
 
+
   - platform: history_stats
     name: 'Josiah time home this month'
     entity_id: person.josiah
@@ -194,3 +185,26 @@
     start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'
     end: '{{ now() }}'      
 
+
+##########################################################
+## Climate Averages
+##########################################################
+
+
+  - platform: min_max
+    entity_ids:
+      - sensor.master_bedroom_humidity
+      - sensor.second_bedroom_humidity
+      - sensor.third_bedroom_humidity
+      - sensor.loft_humidity
+    name: 'Upstairs Humidity'
+    round_digits: 1
+
+  - platform: min_max
+    entity_ids:
+      - sensor.second_bedroom_temperature
+      - sensor.master_bedroom_temperature
+      - sensor.third_bedroom_temperature
+      - sensor.loft_temperature
+    name: 'Upstairs Temperature'
+    round_digits: 1

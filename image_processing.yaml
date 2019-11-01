@@ -9,7 +9,7 @@
       - entity_id: camera.dining
       - entity_id: camera.garage_entrance  
       - entity_id: camera.loft
-      - entity_id: camera.office_camera
+      - entity_id: camera.office
       - entity_id: camera.basement
       - entity_id: camera.common_area
       
@@ -36,6 +36,6 @@
       - entity_id: camera.dining
       - entity_id: camera.garage_entrance  
       - entity_id: camera.loft
-      - entity_id: camera.office_camera
+      - entity_id: camera.office
       - entity_id: camera.basement
       - entity_id: camera.common_area
