@@ -148,6 +148,20 @@
           {%- endfor -%}
 
 
+      zwave_count:
+        entity_id: []
+        friendly_name: 'Number of Z-Wave Nodes'
+        value_template: >
+          {%- set domains = ['zwave'] -%}
+          {%- for domain in domains -%}
+            {%- for item in states[domain] -%}
+              {% if loop.first %}
+                {{loop.length}}
+              {% endif %}
+            {%- endfor -%}
+          {%- endfor -%}
+
+
 ##########################################################
 ## History Stats
 ##########################################################

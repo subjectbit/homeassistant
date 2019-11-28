@@ -6,6 +6,12 @@
 *.db
 *.log
 *.mp3
+*.db-shm
+*.db-wal
+*.txt
+*.sqlite
+*.xml
+
 
 ##########################################################
 ## Files
@@ -23,6 +29,8 @@ customize.yaml
 .gitignore
 home-assistant_v2.db-shm
 home-assistant_v2.db-wal
+zwave_device_config.yaml
+
 
 ##########################################################
 ## Folders

@@ -68,9 +68,9 @@
 
   - platform: command_line
     switches:
-      home_assistant_restart:
+      restart_home_assistant:
         command_on: "curl http://127.0.0.1:8126/container/home-assistant/restart"
-        friendly_name: Home Assistant
+        friendly_name: Restart Home Assistant
 
   - platform: command_line
     switches:

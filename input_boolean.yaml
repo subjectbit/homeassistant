@@ -75,6 +75,11 @@
     initial: off
     icon: mdi:home-automation
   
+  vacation:
+    name: 'Vacation'
+    initial: off
+    icon: mdi:palm-tree
+
   entertainment:
     name: 'Entertainment'
     initial: off
