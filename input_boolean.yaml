@@ -104,3 +104,13 @@
     name: 'Adjust Brightness'
     initial: off
     icon: mdi:brightness-6
+
+  meditate:
+    name: 'Meditate'
+    initial: off
+    icon: mdi:meditation
+  
+  xbox:
+    name: 'Xbox'
+    initial: off
+    icon: mdi:xbox

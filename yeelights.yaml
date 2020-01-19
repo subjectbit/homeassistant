@@ -1,14 +1,9 @@
 devices:
-  192.168.86.166:
-    name: 'Loft Light'
+  192.168.86.68:
+    name: 'Second Bedroom Ambience'
     use_music_mode: True
     model: bslamp1
       
   192.168.86.250:
-    name: 'Desk Light'
+    name: 'Second Bedroom Lamp'
     model: lamp1
-
-  192.168.86.231:
-    name: 'Living Room Ambience'
-    model: strip1
-

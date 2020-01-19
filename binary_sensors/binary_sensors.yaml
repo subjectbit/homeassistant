@@ -112,3 +112,12 @@
              is_state('binary_sensor.laundry_motion', 'on') or 
              is_state('binary_sensor.third_bedroom_motion', 'on') }}
         device_class: motion
+
+  - platform: template
+    sensors:
+      tv_time:
+        friendly_name: "TV Time"
+        value_template: >
+          {{ is_state('media_player.common_area_smartcast', 'on') or
+             is_state('media_player.second_bedroom_smartcast', 'on') or 
+             is_state('media_player.master_suite_smartcast', 'on') }}

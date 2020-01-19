@@ -5,3 +5,9 @@
     - light.basement_light_2
     - light.basement_light_3
     - light.basement_4
+
+- platform: group
+  name: Second Bedroom
+  entities:
+    - light.second_bedroom1
+    - light.second_bedroom2

@@ -5,7 +5,8 @@ homeassistant:
   unit_system: imperial
   time_zone: America/New_York
   name: !secret name
-  
+  customize: !include customize.yaml
+
 
 ##########################################################
 ## Remote Access & IP Ban
@@ -24,14 +25,8 @@ http:
 
 
 frontend:
-  themes: !include themes.yaml
+  themes: !include_dir_merge_named themes
   javascript_version: latest
-
-
-
-##########################################################
-## Z-Wave
-##########################################################
 
 
 ##########################################################
@@ -44,7 +39,7 @@ hacs:
 
 
 ##########################################################
-## Pyhon Scripts
+## Python Scripts
 ##########################################################
 
 
@@ -168,7 +163,7 @@ tts:
 default_config:
 stream:
 ffmpeg:
-
+tplink:
 
 ##########################################################
 ## Owntracks
@@ -176,7 +171,7 @@ ffmpeg:
 
 
 owntracks:
-  max_gps_accuracy: 200
+  max_gps_accuracy: 150
 
 
 ##########################################################
@@ -197,6 +192,7 @@ discovery:
   ignore:
     - homekit
 
+
 ##########################################################
 ## Weather
 ##########################################################
@@ -213,12 +209,12 @@ weather:
 ##########################################################
 
 
-plex:
-  token: !secret plex_token
-  ssl: true
-  media_player:
-    use_episode_art: true
-    show_all_controls: true
+#plex:
+#  token: !secret plex_token
+#  ssl: true
+#  media_player:
+#    use_episode_art: true
+#    show_all_controls: true
 
 
 ##########################################################
@@ -245,8 +241,8 @@ mqtt:
 ##########################################################
 
 
-shell_command:
-  teach_facebox: 'cd /opt/docker/hass-config/python_scripts && python3 teach_facebox.py'
+#shell_command:
+  #teach_facebox: 'cd /opt/docker/hass-config/python_scripts && python3 teach_facebox.py'
 
 
 ##########################################################
