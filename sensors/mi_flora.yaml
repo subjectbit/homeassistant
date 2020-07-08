@@ -5,6 +5,6 @@
 
 - platform: miflora
   mac: !secret plant_mac
-  name: Office Flower
+  name: Office Plant
   force_update: true
   median: 3

@@ -185,7 +185,7 @@
 
   - platform: history_stats
     name: TV Today
-    entity_id: sensor.tv_time
+    entity_id: binary_sensor.tv_time
     state: 'on'
     type: time
     start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
@@ -193,7 +193,7 @@
 
   - platform: history_stats
     name: TV Monthly
-    entity_id: sensor.tv_time
+    entity_id: binary_sensor.tv_time
     state: 'on'
     type: time
     start: '{{ now().replace(day=1).replace(hour=0).replace(minute=0).replace(second=0) }}'

@@ -24,8 +24,8 @@
         command_off: "JgBgAAABLJQUERMTERQTNxITFBIUERIUEzYSORQ2FBEVNRU1ExQTNhITFTUTExQSFBERFBQSExESORQREjgVNRU1EzgVNRU1EwAFSQABK0sUAAxgAAEsSRQADGAAAS1IFQANBQAAAAAAAAAA=="
 
 
- # - platform: broadlink
- #   host: !secret broadlink_master_bedroom_host
- #   mac: !secret broadlink_master_bedroom_mac
- #   timeout: 15
- #   type: rm2_pro_plus
+  - platform: broadlink
+    host: !secret broadlink_second_bedroom_host
+    mac: !secret broadlink_second_bedroom_mac
+    timeout: 15
+    type: rm2_pro_plus

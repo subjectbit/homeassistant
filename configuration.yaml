@@ -30,15 +30,6 @@ frontend:
 
 
 ##########################################################
-## HACS
-##########################################################
-
-
-hacs:
-  token: !secret hacs_token
-
-
-##########################################################
 ## Python Scripts
 ##########################################################
 
@@ -205,19 +196,6 @@ weather:
 
 
 ##########################################################
-## Plex
-##########################################################
-
-
-#plex:
-#  token: !secret plex_token
-#  ssl: true
-#  media_player:
-#    use_episode_art: true
-#    show_all_controls: true
-
-
-##########################################################
 ## MQTT 
 ##########################################################
 
@@ -237,12 +215,18 @@ mqtt:
 
 
 ##########################################################
-## Shell Commands
+## Air Quality Monitoring 
 ##########################################################
 
 
-#shell_command:
-  #teach_facebox: 'cd /opt/docker/hass-config/python_scripts && python3 teach_facebox.py'
+iqvia:
+  zip_code: !secret zip
+
+airvisual:
+  api_key: !secret airvisual_key
+  geographies:
+    latitude: !secret lat
+    longitude: !secret long
 
 
 ##########################################################
@@ -251,13 +235,11 @@ mqtt:
 
 
 group: !include groups.yaml
-image_processing: !include image_processing.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 switch: !include_dir_merge_list switches/
 sensor: !include_dir_merge_list sensors/
 binary_sensor: !include_dir_merge_list binary_sensors/
-zone: !include zones.yaml
 light: !include_dir_merge_list lights/
 yeelight: !include lights/yeelights.yaml
 camera: !include_dir_merge_list cameras/

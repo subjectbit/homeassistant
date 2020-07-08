@@ -1,16 +1,33 @@
 ##########################################################
+## Google Wifi
+##########################################################
+
+  - platform: google_wifi
+    name: 'Wifi'
+    monitored_conditions:
+    - status
+    - uptime
+    - last_restart
+
+
+##########################################################
 ## CPU Performance & Utilities
 ##########################################################          
+  
+  - platform: cpuspeed      
 
-- platform: cpuspeed      
+  - platform: time_date
+    display_options:
+      - time
+      - date
 
-- platform: time_date
-  display_options:
-    - time
-    - date
+  - platform: yr
 
-- platform: yr
 
-- platform: uptime
-  name: Hub Uptime
-  unit_of_measurement: days
+##########################################################
+## Uptime
+##########################################################
+
+  - platform: uptime
+    name: Hub Uptime
+    unit_of_measurement: days
