@@ -1,11 +1,11 @@
 homeassistant:
-  latitude: !secret lat
-  longitude: !secret long
-  elevation: 430
-  unit_system: imperial
-  time_zone: America/New_York
-  name: !secret name
-  customize: !include customize.yaml
+#  latitude: !secret lat
+#  longitude: !secret long
+#  elevation: 430
+#  unit_system: imperial
+#  time_zone: America/New_York
+#  name: !secret name
+#  customize: !include customize.yaml
 
 
 ##########################################################
@@ -14,7 +14,6 @@ homeassistant:
 
 
 http:
-  base_url: !secret base_url
   ip_ban_enabled: true
   login_attempts_threshold: 3
 
@@ -26,7 +25,6 @@ http:
 
 frontend:
   themes: !include_dir_merge_named themes
-  javascript_version: latest
 
 
 ##########################################################
@@ -36,6 +34,14 @@ frontend:
 
 python_script:
 
+  
+##########################################################
+## Z-Wave
+##########################################################
+
+
+zwave:
+  network_key: !secret zwave_key
 
 ##########################################################
 ## Device Tracking
@@ -56,67 +62,10 @@ device_tracker:
 ##########################################################
 
 
-history: 
-  include:
-    domains:
-      - light
-      - media_player
-      - person
-      - sensor
-      - binary_sensor
-      - image_processing  
-  exclude:
-    entities:
-      - sensor.yr_symbol
-      - sun.sun
-      - sensor.time
-      - sensor.sunrise
-      - sensor.sunset
-      - sensor.date
-      - sensor.custom_card_tracker
-
-      
-recorder:
-  include:
-    domains:
-      - light
-      - media_player
-      - person
-      - sensor
-      - binary_sensor
-      - image_processing  
-  exclude:
-    entities:
-      - sensor.yr_symbol
-      - sun.sun
-      - sensor.time
-      - sensor.sunrise
-      - sensor.sunset
-      - sensor.date
-      - sensor.custom_card_tracker
-  purge_interval: 0
-
-influxdb:
-  database: hass_db
-  username: !secret influxdb_username
-  password: !secret influxdb_password
-  include:
-    domains:
-      - light
-      - media_player
-      - person
-      - sensor
-      - binary_sensor
-      - image_processing  
-  exclude:
-    entities:
-      - sensor.yr_symbol
-      - sun.sun
-      - sensor.time
-      - sensor.sunrise
-      - sensor.sunset
-      - sensor.date
-      - sensor.custom_card_tracker
+#influxdb:
+#  database: hass_db
+#  username: !secret influxdb_username
+#  password: !secret influxdb_password
 
 
 ##########################################################
@@ -156,14 +105,6 @@ stream:
 ffmpeg:
 tplink:
 
-##########################################################
-## Owntracks
-##########################################################
-
-
-owntracks:
-  max_gps_accuracy: 150
-
 
 ##########################################################
 ## Logging
@@ -185,15 +126,16 @@ discovery:
 
 
 ##########################################################
-## Weather
+## Open Garage
 ##########################################################
 
-
-weather:
-  - platform: darksky
-    api_key: !secret darksky_api
-    mode: daily
-
+cover:
+  platform: opengarage
+  covers:
+    garage:
+      host: !secret opengarage_host
+      device_key: !secret opengarage_key
+      name: Garage Door
 
 ##########################################################
 ## MQTT 
@@ -215,12 +157,19 @@ mqtt:
 
 
 ##########################################################
+## Spotify
+##########################################################
+
+    
+spotify:
+  client_id: !secret spotify_client
+  client_secret: !secret spotify_secret
+
+
+##########################################################
 ## Air Quality Monitoring 
 ##########################################################
 
-
-iqvia:
-  zip_code: !secret zip
 
 airvisual:
   api_key: !secret airvisual_key
@@ -236,7 +185,7 @@ airvisual:
 
 group: !include groups.yaml
 automation: !include automations.yaml
-script: !include scripts.yaml
+script: !include_dir_merge_list scripts/
 switch: !include_dir_merge_list switches/
 sensor: !include_dir_merge_list sensors/
 binary_sensor: !include_dir_merge_list binary_sensors/

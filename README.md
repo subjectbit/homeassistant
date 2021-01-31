@@ -26,7 +26,7 @@
 <details>
 <summary>
   <b>Lighting</b></summary>
-  <p>After experimenting with wi-fi bulbs, I decided to leverage Zigbee for all lighting. In my current setup, I have 50+ bulbs in action with the majority coming from the Philips Hues lineup. I've never used the official hub as I prefer to use a more genericized hub to reduce vendor dependencies. To that end, I've had great success using the deCONZ software with the Conbee II coordinator. Setting up lights is simple and performance is rock solid.</p>
+  <p>After experimenting with wi-fi bulbs, I decided to leverage Zigbee for all lighting. In my current setup, I have 70+ bulbs in action with the majority coming from the Philips Hues lineup. I've never used the official hub as I prefer to use a more genericized hub to reduce vendor dependencies. To that end, I've had great success using the deCONZ software with the Conbee II coordinator. Setting up lights is simple and performance is rock solid.</p>
   <ul>
   <li><a href="https://www2.meethue.com/en-us">Philips Hues</a></li>
   <li><a href="https://www.ikea.com/us/en/catalog/categories/departments/living_room/36812/">TRÅDFRI</a></li>
@@ -81,13 +81,6 @@
 <p>This page provides a visual overview to voice commands and displays all lighting groups in the house.</p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/lights_ui.png">
-</p>
-
-## Media
-
-<p>As the number of media devices grew, it became too cluttered on a room-by-room view basis. Now all media devices are clustered on a single view.</p>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/subjectbit/homeassistant/master/ui/media_ui.png">
 </p>
 
 ## Settings

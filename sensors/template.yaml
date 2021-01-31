@@ -30,7 +30,6 @@
 
 
       sensor_count:
-        entity_id: []
         friendly_name: 'Number of Sensors'
         value_template: >
           {%- set domains = ['sensor'] -%}
@@ -43,7 +42,6 @@
           {%- endfor -%}
 
       automation_count:
-        entity_id: []
         friendly_name: 'Number of Native Automations'
         value_template: >
           {%- set domains = ['automation'] -%}
@@ -56,7 +54,6 @@
           {%- endfor -%}
 
       script_count:
-        entity_id: []
         friendly_name: 'Number of Scripts'
         value_template: >
           {%- set domains = ['script'] -%}
@@ -82,7 +79,6 @@
           {%- endfor -%}
 
       binary_sensor_count:
-        entity_id: []
         friendly_name: 'Number of Binary Sensors'
         value_template: >
           {%- set domains = ['binary_sensor'] -%}
@@ -95,7 +91,6 @@
           {%- endfor -%}
 
       lights_count:
-        entity_id: []
         friendly_name: 'Number of Lights'
         value_template: >
           {%- set domains = ['light'] -%}
@@ -108,7 +103,6 @@
           {%- endfor -%}
 
       tracker_count:
-        entity_id: []
         friendly_name: 'Number of Devices'
         value_template: >
           {%- set domains = ['device_tracker'] -%}
@@ -121,7 +115,6 @@
           {%- endfor -%}
 
       media_player_count:
-        entity_id: []
         friendly_name: 'Number of Media Players'
         value_template: >
           {%- set domains = ['media_player'] -%}
@@ -135,7 +128,6 @@
 
 
       camera_count:
-        entity_id: []
         friendly_name: 'Number of Cameras'
         value_template: >
           {%- set domains = ['camera'] -%}
@@ -149,7 +141,6 @@
 
 
       zwave_count:
-        entity_id: []
         friendly_name: 'Number of Z-Wave Nodes'
         value_template: >
           {%- set domains = ['zwave'] -%}

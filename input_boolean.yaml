@@ -1,87 +1,87 @@
 # Input booleans for disabling automation
 
   common_area:
-    name: 'Common Area'
+    name: 'Common Area Automation'
     initial: on
     icon: mdi:home-automation
 
   kitchen:
-    name: 'Kitchen'
+    name: 'Kitchen Automation'
     initial: on
     icon: mdi:home-automation
 
   office:
-    name: 'Office'
+    name: 'Office Automation'
     initial: on
     icon: mdi:home-automation
 
   mudroom:
-    name: 'Mudroom'
+    name: 'Mudroom Automation'
     initial: on
     icon: mdi:home-automation
 
   half_bath:
-    name: 'Half Bath'
+    name: 'Half Bath Automation'
     initial: on
     icon: mdi:home-automation
 
   loft:
-    name: 'Loft'
+    name: 'Loft Automation'
     initial: on
     icon: mdi:home-automation
 
   laundry:
-    name: 'Laundry'
+    name: 'Laundry Automation'
     initial: on
     icon: mdi:home-automation
 
   master_bedroom:
-    name: 'Master Bedroom'
+    name: 'Master Bedroom Automation'
     initial: on
     icon: mdi:home-automation
 
   master_bath:
-    name: 'Master Bath'
+    name: 'Master Bath & Closet Automation'
     initial: on
     icon: mdi:home-automation
 
   second_bedroom:
-    name: 'Second Bedroom'
+    name: 'Second Bedroom & Closet Automation'
     initial: on
     icon: mdi:home-automation
 
   third_bedroom:
-    name: 'Third Bedroom'
+    name: 'Third Bedroom Automation'
     initial: on
     icon: mdi:home-automation
 
   second_bath:
-    name: 'Second Bath'
+    name: 'Second Bath Automation'
     initial: on
     icon: mdi:home-automation
 
   basement:
-    name: 'Basement'
+    name: 'Basement Automation'
     initial: on
     icon: mdi:home-automation
 
   front_entry:
-    name: 'Front Entry'
+    name: 'Front Entry Automation'
     initial: on
     icon: mdi:home-automation
   
   global:
-    name: 'Global'
+    name: 'All Automation'
     initial: off
     icon: mdi:home-automation
   
   vacation:
-    name: 'Vacation'
+    name: 'Vacation Mode'
     initial: off
     icon: mdi:palm-tree
 
   entertainment:
-    name: 'Entertainment'
+    name: 'Entertainment Mode'
     initial: off
     icon: mdi:television
 
@@ -95,11 +95,6 @@
     initial: off
     icon: mdi:volume-source
 
-  space:
-    name: 'Space'
-    initial: off
-    icon: mdi:weather-night
-
   light_strength:
     name: 'Adjust Brightness'
     initial: off
@@ -109,8 +104,18 @@
     name: 'Meditate'
     initial: off
     icon: mdi:meditation
-  
-  xbox:
-    name: 'Xbox'
+
+  romance:
+    name: 'Romance'
     initial: off
-    icon: mdi:xbox
+    icon: mdi:hand-heart
+
+  christmas:
+    name: 'Christmas'
+    initial: off
+    icon: mdi:pine-tree
+
+  restart:
+    name: 'Restart'
+    initial: off
+    icon: mdi:restart

@@ -8,3 +8,163 @@
   - data:
       entity_id: all
     service: automation.turn_on
+- id: '1610208096289'
+  alias: Mariel dog park notification
+  description: ''
+  use_blueprint:
+    path: homeassistant/notify_leaving_zone.yaml
+    input:
+      person_entity: person.mariel
+      zone_entity: zone.dog_park
+      notify_device: 56f9ad770d1e474d9198ec58cd80faad
+- id: '1610490599216'
+  alias: Low battery level detection & notification for all battery sensors
+  description: ''
+  use_blueprint:
+    path: Sbyx/low-battery-level-detection-notification-for-all-battery-sensors.yaml
+    input:
+      day: '0'
+      threshold: '50'
+      time: '8:00:00'
+      actions:
+      - service: notify.persistent_notification
+        data:
+          message: '{{sensors}} less than 50%.'
+          title: 'Action Requried: Change Battery'
+      - service: notify.mobile_app_pixel_4_xl
+        data:
+          message: '{{sensors}} less than 50%.'
+          title: 'Action Requried: Change Battery'
+- id: '1610839845082'
+  alias: Water main shut-off
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: switch.shut_off_valve
+    to: 'off'
+    from: 'on'
+  condition: []
+  action:
+  - device_id: 56f9ad770d1e474d9198ec58cd80faad
+    domain: mobile_app
+    type: notify
+    message: The water main was shut off.
+    title: WATER MAIN ALERT
+  - device_id: 8ac84f46a21943a1b200d7fd1b224536
+    domain: mobile_app
+    type: notify
+    message: The water main was shut off.
+    title: WATER MAIN ALERT
+  mode: single
+- id: '1610910606287'
+  alias: Lock mudroom door if no one is home
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.anyone_home
+    to: 'off'
+  condition:
+  - condition: device
+    device_id: 5970d1994cc0a11276621d166120538e
+    domain: lock
+    entity_id: lock.mudroom_door
+    type: is_unlocked
+  action:
+  - service: lock.lock
+    data: {}
+    entity_id: lock.mudroom_door
+  mode: single
+- id: '1610910729295'
+  alias: Lock mudroom door at night
+  description: ''
+  trigger:
+  - platform: time
+    at: '21:00'
+  condition:
+  - condition: device
+    device_id: 5970d1994cc0a11276621d166120538e
+    domain: lock
+    entity_id: lock.mudroom_door
+    type: is_unlocked
+  action:
+  - service: lock.lock
+    data: {}
+    entity_id: lock.mudroom_door
+  mode: single
+- id: '1611005948213'
+  alias: 'Lock front door at night '
+  description: ''
+  trigger:
+  - platform: time
+    at: '21:00'
+  condition:
+  - condition: device
+    device_id: 55e1fe9d5860dc5ccd75733265ff56ed
+    domain: lock
+    entity_id: lock.front_door
+    type: is_unlocked
+  action:
+  - service: lock.lock
+    data: {}
+    entity_id: lock.front_door
+  mode: single
+- id: '1611006023306'
+  alias: Lock front door if no one is home
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.anyone_home
+    to: 'off'
+  condition:
+  - condition: device
+    device_id: 55e1fe9d5860dc5ccd75733265ff56ed
+    domain: lock
+    entity_id: lock.front_door
+    type: is_unlocked
+  action:
+  - service: lock.lock
+    data: {}
+    entity_id: lock.front_door
+  mode: single
+- id: '1612120968109'
+  alias: Notification when front door deadbolt is jammed
+  description: Sends a notification to all users if the deadbolt is jammed
+  trigger:
+  - platform: state
+    entity_id: lock.front_door
+    attribute: lock_status
+    to: Deadbolt Jammed
+  condition: []
+  action:
+  - device_id: 56f9ad770d1e474d9198ec58cd80faad
+    domain: mobile_app
+    type: notify
+    message: 'The front door deadbolt is jammed, please shut the door and re-lock. '
+    title: FRONT DOOR ALERT
+  - device_id: 8ac84f46a21943a1b200d7fd1b224536
+    domain: mobile_app
+    type: notify
+    message: 'The front door deadbolt is jammed, please shut the door and re-lock. '
+    title: FRONT DOOR ALERT
+  mode: single
+- id: '1612121448058'
+  alias: Notification when mudroom deadbolt is jammed
+  description: Sends a notification to all users if the deadbolt is jammed
+  trigger:
+  - platform: state
+    entity_id: lock.mudroom_door
+    attribute: lock_status
+    to: Deadbolt Jammed
+  condition: []
+  action:
+  - device_id: 56f9ad770d1e474d9198ec58cd80faad
+    domain: mobile_app
+    type: notify
+    message: 'The mudroom door deadbolt is jammed, please shut the door and re-lock. '
+    title: MUDROOM DOOR ALERT
+  - device_id: 8ac84f46a21943a1b200d7fd1b224536
+    domain: mobile_app
+    type: notify
+    message: 'The mudroom deadbolt is jammed, please shut the door and re-lock. '
+    title: MUDROOM DOOR ALERT
+  mode: single
